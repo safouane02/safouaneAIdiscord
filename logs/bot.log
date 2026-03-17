@@ -1,0 +1,284 @@
+2026-03-16 23:53:58 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-16 23:54:55 [ERROR] reply_handler: Groq error for user 1027653127828152381: Error code: 400 - {'error': {'message': 'The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.', 'type': 'invalid_request_error', 'code': 'model_decommissioned'}}
+2026-03-16 23:56:29 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-16 23:56:56 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'how are u'
+2026-03-16 23:58:39 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'can u speak arabic ?'
+2026-03-16 23:58:51 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'كم سعر بنزين في جزائر'
+2026-03-16 23:59:03 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل تعرف لعبة بلود سترايك'
+2026-03-17 00:04:19 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من صنعك'
+2026-03-17 00:04:36 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'ولكن اسمك safouaneAI'
+2026-03-17 12:03:48 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 12:04:33 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'who are u'
+2026-03-17 12:32:51 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'Hi'
+2026-03-17 12:33:11 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'هل تتحدث العربية'
+2026-03-17 12:34:17 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'هلي يمكنك ان تخبرني كم عدد الاشخاص الذين يمتلكون نفس رتبتي ف'
+2026-03-17 12:34:39 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اسكت'
+2026-03-17 12:34:52 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'كم مساحة الجزائر'
+2026-03-17 12:35:19 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'قول علي هايشة'
+2026-03-17 12:35:20 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'ماهي اوضاع الحرب في طهران'
+2026-03-17 12:35:54 [INFO] reply_handler: User alielagrari (1347633486756052992) — 'ماهي احسن 5 كتب لتطوير الذات'
+2026-03-17 12:36:28 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'وش رايك في الجزائر هل هي دولة جيدة'
+2026-03-17 12:36:39 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'وولاية شلف'
+2026-03-17 12:36:55 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'نعم'
+2026-03-17 12:37:22 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'نلعب بيس عند عمي موح'
+2026-03-17 12:39:01 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل تحب الفتات'
+2026-03-17 12:39:16 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اقصد الفتيات'
+2026-03-17 12:40:52 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'say my name'
+2026-03-17 12:41:00 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'safouane'
+2026-03-17 12:41:17 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'قل كلمة جزائرية'
+2026-03-17 12:41:23 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'جملة'
+2026-03-17 12:41:36 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'قول والله'
+2026-03-17 12:41:48 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'ايا مداسرنيش'
+2026-03-17 12:45:12 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'hi'
+2026-03-17 12:45:38 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'negger'
+2026-03-17 12:45:48 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'shut up'
+2026-03-17 12:46:57 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'YoNigga'
+2026-03-17 12:47:40 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'CanWeHaveSexAfterFasting?'
+2026-03-17 12:47:40 [ERROR] reply_handler: Groq error for user 1386220640218120202: 400 Bad Request (error code: 50035): Invalid Form Body
+In message_reference: Unknown message
+2026-03-17 12:48:05 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'CanWeHaveSe6AfterFasting?'
+2026-03-17 12:48:23 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'Yes no question'
+2026-03-17 12:48:39 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'NiggaIMeanWithYou'
+2026-03-17 12:48:50 [INFO] reply_handler: User diablo.mc (1386220640218120202) — 'Yes or no'
+2026-03-17 12:51:33 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من صنعك'
+2026-03-17 12:51:42 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من هم'
+2026-03-17 12:57:53 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 12:57:54 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'hh'
+2026-03-17 12:58:04 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من صنعك'
+2026-03-17 12:58:13 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'مذا'
+2026-03-17 12:58:33 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من هو صفوان'
+2026-03-17 12:58:51 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'وماهو ai الذي تستعمله'
+2026-03-17 12:59:07 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل تعتمد على gpt او lama'
+2026-03-17 12:59:28 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل انت جيد في عربية'
+2026-03-17 13:03:40 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:03:50 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'hi'
+2026-03-17 13:03:58 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل تتحدث عربية'
+2026-03-17 13:04:08 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من صنعك'
+2026-03-17 13:04:24 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'وماهو الai الذي تعتمد عليه'
+2026-03-17 13:04:45 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل تقدر تبرمج اكواد'
+2026-03-17 13:16:10 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'who are u'
+2026-03-17 13:18:56 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:27:01 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:27:24 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'nice'
+2026-03-17 13:27:48 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اطرد <@1454048428509368365> من السيرفر'
+2026-03-17 13:28:21 [INFO] reply_handler: User rc.rl (1027653127828152381) — '@Bot اطرد <@1454048428509368365>  لأنه يسبام'
+2026-03-17 13:29:22 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797>  اطرد <@1454048428509368365> من السير'
+2026-03-17 13:31:09 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797>  اطرد <@1131246066562519160>  من السي'
+2026-03-17 13:31:26 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 13:32:05 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اطرده'
+2026-03-17 13:34:37 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'wow'
+2026-03-17 13:36:02 [ERROR] mod_commands: Mod error in announce: Channel "اكتب" not found.
+2026-03-17 13:36:02 [ERROR] bot: Command error in announce: Channel "اكتب" not found.
+2026-03-17 13:37:22 [INFO] whitelist: Added user 1347633486756052992 to DM whitelist
+2026-03-17 13:37:22 [INFO] admin_commands: Owner added user 1347633486756052992 to whitelist
+2026-03-17 13:37:23 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-17 13:40:15 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:41:02 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 13:41:48 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'hi'
+2026-03-17 13:42:18 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'help'
+2026-03-17 13:42:39 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'developer'
+2026-03-17 13:42:50 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'hi'
+2026-03-17 13:42:52 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'gf'
+2026-03-17 13:43:07 [ERROR] bot: Command error in clear: You are missing Manage Messages permission(s) to run this command.
+2026-03-17 13:43:57 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اعطني معلومات هذا العضو <@14512'
+2026-03-17 13:44:38 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت ارسل رسالة هنا في هذه القناة اع'
+2026-03-17 13:44:48 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'ارسله في امبد'
+2026-03-17 13:46:02 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 13:47:56 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:47:56 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'من صنعك'
+2026-03-17 13:58:21 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 13:59:03 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 13:59:14 [INFO] tickets: Ticket #2 opened by rc.rl (1027653127828152381)
+2026-03-17 13:59:51 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'كيف اجيب سكن الجديد من متحجر'
+2026-03-17 14:00:47 [INFO] tickets: Ticket #2 escalated — user requests admin assistance
+2026-03-17 14:01:13 [INFO] tickets: Ticket #2 escalated — user requests admin assistance
+2026-03-17 14:01:24 [INFO] tickets: Ticket #2 escalated — user requests admin assistance to close the ticket
+2026-03-17 14:01:32 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اغلق هذا التكت'
+2026-03-17 14:01:32 [INFO] tickets: Ticket #2 escalated — close ticket request
+2026-03-17 14:01:46 [INFO] tickets: Ticket #2 escalated — close and delete ticket request
+2026-03-17 14:01:46 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'لااغلقه واحذف التكت'
+2026-03-17 14:02:03 [INFO] tickets: Ticket #2 closed by rc.rl
+2026-03-17 14:02:53 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:03:20 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:04:19 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'ارسل لي رسالة في الخاص'
+2026-03-17 14:04:30 [INFO] tickets: Ticket #3 opened by rc.rl (1027653127828152381)
+2026-03-17 14:05:46 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اريد مناداة دعم'
+2026-03-17 14:06:10 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'احتاج للدعمانسان حقيقي هنا'
+2026-03-17 14:08:27 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 14:08:41 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:10:15 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:10:46 [INFO] tickets: Ticket #3 closed by rc.rl
+2026-03-17 14:11:04 [INFO] tickets: Ticket #4 opened by rc.rl (1027653127828152381)
+2026-03-17 14:12:59 [ERROR] broadcast: Broadcast error: target is a required argument that is missing.
+2026-03-17 14:13:07 [ERROR] broadcast: Broadcast error: message is a required argument that is missing.
+2026-03-17 14:14:09 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 14:14:31 [INFO] broadcast: Broadcast by rc.rl — 12 sent, 0 failed
+2026-03-17 14:14:32 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 14:14:38 [INFO] broadcast: Broadcast by rc.rl — 12 sent, 0 failed
+2026-03-17 14:19:04 [INFO] tickets: Ticket #4 closed by rc.rl
+2026-03-17 14:21:40 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 14:22:29 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> اطرد <@704810036547026954> لانه مزعج'
+2026-03-17 14:22:42 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> اطرد <@704810036547026954> لانه مزعج'
+2026-03-17 14:22:56 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> اطرد <@704810036547026954> لانه مزعج'
+2026-03-17 14:24:21 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 14:25:13 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت امسح رسائل هذه القناة امسح 20 ر'
+2026-03-17 14:25:58 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد <@704810036547026954> لانه'
+2026-03-17 14:26:27 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد <@704810036547026954> السب'
+2026-03-17 14:26:39 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد <@704810036547026954> لانه'
+2026-03-17 14:26:58 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد <@704810036547026954> لانه'
+2026-03-17 14:27:18 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 14:29:10 [INFO] broadcast: Broadcast by rc.rl — 9 sent, 1 failed
+2026-03-17 14:29:32 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:30:14 [INFO] dm_handler: Blocked DM from non-whitelisted user aanasmohame235 (1261299636975697940)
+2026-03-17 14:30:23 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 14:30:27 [INFO] tickets: Ticket #5 opened by rc.rl (1027653127828152381)
+2026-03-17 14:32:49 [INFO] reply_handler: User kakashidt._31485 (1336042891411456102) — 'Hey'
+2026-03-17 14:32:52 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اه'
+2026-03-17 14:33:41 [INFO] reply_handler: User kakashidt._31485 (1336042891411456102) — 'What is the largest Arab country?'
+2026-03-17 14:34:23 [INFO] reply_handler: User kakashidt._31485 (1336042891411456102) — 'أهدر بل دارجة'
+2026-03-17 14:35:08 [INFO] reply_handler: User kakashidt._31485 (1336042891411456102) — 'انت طفلة ولا طفل'
+2026-03-17 14:35:22 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'قل مطوري وليس خالقي'
+2026-03-17 14:36:23 [INFO] reply_handler: User kakashidt._31485 (1336042891411456102) — 'اطرد <@1336042891411456102>'
+2026-03-17 14:37:34 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'no'
+2026-03-17 14:38:48 [INFO] whitelist: Added user 1336042891411456102 to DM whitelist
+2026-03-17 14:38:49 [INFO] admin_commands: Owner added user 1336042891411456102 to whitelist
+2026-03-17 14:38:49 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-17 14:39:32 [INFO] dm_handler: DM from kakashidt._31485 (1336042891411456102): 'Hi'
+2026-03-17 14:39:34 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'وش هذا'
+2026-03-17 14:39:51 [INFO] tickets: Ticket #6 opened by kakashidt._31485 (1336042891411456102)
+2026-03-17 14:41:11 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'ساعد هذا لشخص في التكت'
+2026-03-17 14:44:11 [INFO] whitelist: Removed user 1336042891411456102 from DM whitelist
+2026-03-17 14:44:52 [INFO] dm_handler: Blocked DM from non-whitelisted user kakashidt._31485 (1336042891411456102)
+2026-03-17 14:46:17 [INFO] whitelist: Added user 1336042891411456102 to DM whitelist
+2026-03-17 14:46:17 [INFO] admin_commands: Owner added user 1336042891411456102 to whitelist
+2026-03-17 14:46:18 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-17 14:46:25 [INFO] dm_handler: DM from kakashidt._31485 (1336042891411456102): 'كيف حالك'
+2026-03-17 14:49:04 [ERROR] bot: Command error in dm: You are missing Administrator permission(s) to run this command.
+2026-03-17 14:49:13 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-17 14:49:19 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'انا صفوان الذي صنعك'
+2026-03-17 14:50:18 [INFO] broadcast: Broadcast by rc.rl — 9 sent, 1 failed
+2026-03-17 14:50:43 [INFO] broadcast: Broadcast by rc.rl — 9 sent, 1 failed
+2026-03-17 14:52:23 [INFO] broadcast: Broadcast by rc.rl — 10 sent, 1 failed
+2026-03-17 14:59:47 [ERROR] bot: Command error in add: Member "<1217434996256538624@>" not found.
+2026-03-17 14:59:54 [INFO] dm_handler: DM from rc.rl (1027653127828152381): '<1217434996256538624@>'
+2026-03-17 15:00:00 [ERROR] bot: Command error in add: Member "<1217434996256538624@>" not found.
+2026-03-17 15:00:26 [INFO] dm_handler: DM from rc.rl (1027653127828152381): '12'
+2026-03-17 15:01:07 [INFO] whitelist: Added user 1217434996256538624 to DM whitelist
+2026-03-17 15:01:08 [INFO] admin_commands: Owner added user 1217434996256538624 to whitelist
+2026-03-17 15:01:08 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-17 15:02:44 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل عندك انستغرام صفوان'
+2026-03-17 15:03:01 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم عمر صفوان'
+2026-03-17 15:03:18 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'توصلت معه وقال لي ان عمره 18'
+2026-03-17 15:03:30 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم عمر صفوان'
+2026-03-17 15:03:54 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ولكن كيف صنعك باي لغة وبأي تقنيات'
+2026-03-17 15:04:59 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل انت تعتمد على gpt او ai'
+2026-03-17 15:05:29 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف اجعلك تعمل 24/7'
+2026-03-17 15:05:59 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم تقدر تعالج من طلبات يوما'
+2026-03-17 15:06:38 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'لمذا انت تكتب كلمات خاطئة مثل 然而،  معندها علاقة'
+2026-03-17 15:06:57 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'يعني في انجلزي انت ممتاز وماتخطئ'
+2026-03-17 15:07:58 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل انت تحفظ  الاشياء عندك مثلا لو قلت لك شيئا عندي ورجعت بعد'
+2026-03-17 15:08:19 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99977, Requested 2296. Please try again in 32m43.872s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:08:27 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99967, Requested 2296. Please try again in 32m35.232s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:08:32 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99961, Requested 2291. Please try again in 32m25.727999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:09:37 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99886, Requested 2291. Please try again in 31m20.928s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:10:26 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 15:10:33 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99822, Requested 270. Please try again in 1m19.488s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:10:54 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 15:11:06 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 15:13:20 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-17 15:13:54 [INFO] tickets: Ticket #6 closed by rc.rl
+2026-03-17 15:14:05 [INFO] tickets: Ticket #5 closed by rc.rl
+2026-03-17 15:14:10 [INFO] tickets: Ticket #7 opened by rc.rl (1027653127828152381)
+2026-03-17 15:14:53 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'hi'
+2026-03-17 15:15:07 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99784, Requested 290. Please try again in 1m3.936s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:15:56 [INFO] tickets: Ticket #7 closed by rc.rl
+2026-03-17 15:16:12 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'nice'
+2026-03-17 15:16:13 [ERROR] reply_handler: Groq error for user 1027653127828152381: 404 Not Found (error code: 10003): Unknown Channel
+2026-03-17 15:20:43 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yes'
+2026-03-17 15:20:43 [ERROR] reply_handler: Groq error for user 1027653127828152381: 404 Not Found (error code: 10003): Unknown Channel
+2026-03-17 15:20:51 [ERROR] bot: Command error in move: You are missing Move Members permission(s) to run this command.
+2026-03-17 15:22:52 [ERROR] mod_commands: Mod error in move: Channel "<#1478446998540783839>" not found.
+2026-03-17 15:22:52 [ERROR] bot: Command error in move: Channel "<#1478446998540783839>" not found.
+2026-03-17 15:24:23 [ERROR] reply_handler: Groq error for user 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99745, Requested 366. Please try again in 1m35.904s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:27:32 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'hi'
+2026-03-17 15:27:47 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99905, Requested 409. Please try again in 4m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 15:30:18 [INFO] dm_handler: DM from md8718 (1217434996256538624): 'Nice'
+2026-03-17 15:30:58 [INFO] tickets: Ticket #8 opened by md8718 (1217434996256538624)
+2026-03-17 15:32:56 [ERROR] bot: Command error in clear: You are missing Manage Messages permission(s) to run this command.
+2026-03-17 15:37:24 [INFO] dm_handler: DM from md8718 (1217434996256538624): 'I love u'
+2026-03-17 16:19:37 [INFO] reply_handler: User md8718 (1217434996256538624) — 'i need girl'
+2026-03-17 16:21:12 [INFO] reply_handler: User md8718 (1217434996256538624) — '<@1483233709200244797> kick <@159985870458322944> because he'
+2026-03-17 16:22:05 [INFO] reply_handler: User md8718 (1217434996256538624) — 'So fack u'
+2026-03-17 16:22:34 [ERROR] bot: Command error in clear: You are missing Manage Messages permission(s) to run this command.
+2026-03-17 16:22:48 [INFO] dm_handler: DM from md8718 (1217434996256538624): 'اهلا'
+2026-03-17 16:23:01 [INFO] dm_handler: DM from md8718 (1217434996256538624): 'من صفوان وكم عمره'
+2026-03-17 16:23:38 [ERROR] dm_handler: DM handler error for 1217434996256538624: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99841, Requested 815. Please try again in 9m26.784s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 16:23:48 [ERROR] dm_handler: DM handler error for 1217434996256538624: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99829, Requested 810. Please try again in 9m12.096s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 16:27:17 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'مذا'
+2026-03-17 16:27:24 [ERROR] dm_handler: DM handler error for 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99993, Requested 451. Please try again in 6m23.616s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 16:30:23 [INFO] dm_handler: Blocked DM from non-whitelisted user adammbf (708350514563252304)
+2026-03-17 16:30:33 [INFO] dm_handler: Blocked DM from non-whitelisted user adammbf (708350514563252304)
+2026-03-17 16:32:14 [INFO] broadcast: Broadcast by rc.rl — 48 sent, 98 failed
+2026-03-17 16:34:07 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> kick <@1451989039598010448> because h'
+2026-03-17 16:34:26 [ERROR] reply_handler: Groq error for user 1027653127828152381: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kkq9amctfspad5sagbekwfq3` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99978, Requested 571. Please try again in 7m54.336s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-03-17 18:26:18 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 18:36:34 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 18:37:13 [ERROR] bot: Command error in help: Command raised an exception: Forbidden: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:37:21 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'hi'
+2026-03-17 18:37:22 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'hi'
+2026-03-17 18:37:22 [ERROR] dm_handler: DM handler error for 1027653127828152381: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:38:03 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'nice'
+2026-03-17 18:38:04 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'nice'
+2026-03-17 18:39:16 [ERROR] levels: Level error in rank: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:39:16 [ERROR] bot: Command error in rank: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:39:27 [ERROR] levels: Level error in rank: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:39:27 [ERROR] bot: Command error in rank: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:39:47 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'yo'
+2026-03-17 18:39:48 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'yo'
+2026-03-17 18:40:11 [ERROR] levels: Level error in leaderboard: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:40:11 [ERROR] bot: Command error in leaderboard: Command raised an exception: RuntimeError: threads can only be started once
+2026-03-17 18:42:50 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 18:46:42 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'hi'
+2026-03-17 18:46:43 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'hi'
+2026-03-17 18:46:43 [ERROR] dm_handler: DM handler error for 1027653127828152381: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:46:50 [ERROR] bot: Command error in ping: Command raised an exception: Forbidden: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:47:14 [ERROR] bot: Command error in help: Command raised an exception: Forbidden: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:47:19 [ERROR] bot: Command error in clear: You are missing Manage Messages permission(s) to run this command.
+2026-03-17 18:47:25 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'high'
+2026-03-17 18:47:25 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'high'
+2026-03-17 18:47:26 [ERROR] dm_handler: DM handler error for 1027653127828152381: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 18:48:49 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 18:51:05 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'high'
+2026-03-17 18:51:06 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'high'
+2026-03-17 18:54:36 [INFO] groq_service: Model selected: moonshotai/kimi-k2-instruct for: 'write code python for 5 line'
+2026-03-17 18:54:36 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'write code python for 5 line'
+2026-03-17 18:55:12 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'اكتب كوود برمجة لالة حاسبة'
+2026-03-17 18:55:13 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اكتب كوود برمجة لالة حاسبة'
+2026-03-17 18:55:34 [INFO] groq_service: Model selected: meta-llama/llama-4-scout-17b-16e-instruct for: 'اجعلها بواجهة مستخدم'
+2026-03-17 18:55:36 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اجعلها بواجهة مستخدم'
+2026-03-17 18:58:15 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 18:59:40 [ERROR] levels: Level error in setxp: member is a required argument that is missing.
+2026-03-17 18:59:59 [ERROR] levels: Level error in setxp: xp is a required argument that is missing.
+2026-03-17 19:00:59 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'هل صفوان مبرمج'
+2026-03-17 19:01:00 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل صفوان مبرمج'
+2026-03-17 19:01:14 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'هل انت تستعمل ai ohv[d'
+2026-03-17 19:01:15 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'هل انت تستعمل ai ohv[d'
+2026-03-17 19:01:53 [INFO] groq_service: Model: kimi-k2-instruct | 'اكتب كود بايثون تقوم بادخال رسالة وكم تكررها ويعطي'
+2026-03-17 19:01:55 [INFO] reply_handler: User rc.rl (1027653127828152381) — 'اكتب كود بايثون تقوم بادخال رسالة وكم تكررها ويعطيك اياها مع'
+2026-03-17 19:03:23 [INFO] groq_service: Model: gpt-4o-mini | '<@1483233709200244797> يابوت اطرد هذا الشخص <@1454'
+2026-03-17 19:03:24 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 19:03:25 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد هذا الشخص <@14540484285093'
+2026-03-17 19:03:44 [INFO] groq_service: Model: gpt-4o-mini | '<@1483233709200244797> يابوت اطرد هذا الشخص <@1454'
+2026-03-17 19:03:45 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 19:03:45 [INFO] reply_handler: User rc.rl (1027653127828152381) — '<@1483233709200244797> يابوت اطرد هذا الشخص <@14540484285093'
+2026-03-17 19:35:57 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 19:36:11 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'اهلا'
+2026-03-17 19:36:12 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اهلا'
+2026-03-17 19:36:21 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'كيف اعرف مستوايا في السيرفر'
+2026-03-17 19:36:22 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كيف اعرف مستوايا في السيرفر'
+2026-03-17 19:36:57 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'كيف اطرد شخص'
+2026-03-17 19:36:58 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كيف اطرد شخص'
+2026-03-17 19:37:29 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'ماهي رتبتي في السيرفر'
+2026-03-17 19:37:29 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي رتبتي في السيرفر'
+2026-03-17 19:37:45 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'ماهي الصلاحيات التي عندي'
+2026-03-17 19:37:46 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي الصلاحيات التي عندي'

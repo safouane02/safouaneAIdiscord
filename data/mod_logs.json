@@ -1,0 +1,63 @@
+{
+  "1420857456673689736": {
+    "cases": [
+      {
+        "id": 1,
+        "action": "kick",
+        "target_id": 1437784464225730581,
+        "moderator_id": 1027653127828152381,
+        "reason": "reason : no way",
+        "timestamp": "2026-03-17T12:34:15.753318"
+      },
+      {
+        "id": 2,
+        "action": "kick",
+        "target_id": 851138587411218463,
+        "moderator_id": 1027653127828152381,
+        "reason": "spamming",
+        "timestamp": "2026-03-17T12:41:01.089289"
+      },
+      {
+        "id": 3,
+        "action": "timeout",
+        "target_id": 1308109970369413283,
+        "moderator_id": 1027653127828152381,
+        "reason": "AI moderation",
+        "timestamp": "2026-03-17T12:46:01.635582"
+      },
+      {
+        "id": 4,
+        "action": "kick",
+        "target_id": 1187092760763838565,
+        "moderator_id": 1027653127828152381,
+        "reason": "spam",
+        "timestamp": "2026-03-17T13:24:20.431831"
+      },
+      {
+        "id": 5,
+        "action": "kick",
+        "target_id": 1234487807091671040,
+        "moderator_id": 1027653127828152381,
+        "reason": "\u0645\u0632\u0639\u062c",
+        "timestamp": "2026-03-17T13:27:17.795437"
+      },
+      {
+        "id": 6,
+        "action": "kick",
+        "target_id": 704810036547026954,
+        "moderator_id": 1027653127828152381,
+        "reason": "No reason provided",
+        "timestamp": "2026-03-17T13:27:49.803781"
+      },
+      {
+        "id": 7,
+        "action": "warn",
+        "target_id": 1336042891411456102,
+        "moderator_id": 1027653127828152381,
+        "reason": "No reason provided",
+        "timestamp": "2026-03-17T13:42:25.632389"
+      }
+    ],
+    "next_id": 8
+  }
+}
