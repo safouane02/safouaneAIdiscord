@@ -282,3 +282,4 @@ In message_reference: Unknown message
 2026-03-17 19:37:29 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي رتبتي في السيرفر'
 2026-03-17 19:37:45 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'ماهي الصلاحيات التي عندي'
 2026-03-17 19:37:46 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي الصلاحيات التي عندي'
+2026-03-17 20:10:21 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
