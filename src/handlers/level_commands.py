@@ -17,6 +17,7 @@ class LevelCog(commands.Cog):
 
     # ── !rank ──────────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def rank(self, ctx, member: discord.Member = None):
         member = member or ctx.author
         data = await get_user(ctx.guild.id, member.id)
@@ -81,6 +82,7 @@ class LevelCog(commands.Cog):
 
     # ── !levelroles ────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def levelroles(self, ctx):
         roles = await get_level_roles(ctx.guild.id)
         if not roles:

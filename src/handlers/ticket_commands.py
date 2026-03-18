@@ -231,6 +231,7 @@ class TicketCog(commands.Cog):
 
     # ── !ticket ────────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def ticket(self, ctx):
         channel = await self.open_ticket(ctx.guild, ctx.author)
         if channel is None:
@@ -244,6 +245,7 @@ class TicketCog(commands.Cog):
 
     # ── !close ─────────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def close(self, ctx):
         await self._close_ticket(ctx.channel, ctx.author, ctx.guild)
 
@@ -299,6 +301,7 @@ class TicketCog(commands.Cog):
 
     # ── !transcript ────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def transcript(self, ctx):
         ticket = get_ticket(ctx.guild.id, ctx.channel.id)
         if not ticket:
@@ -314,6 +317,7 @@ class TicketCog(commands.Cog):
 
     # ── !claim ─────────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def claim(self, ctx):
         ticket = get_ticket(ctx.guild.id, ctx.channel.id)
         if not ticket:
@@ -332,6 +336,7 @@ class TicketCog(commands.Cog):
 
     # ── !tadd ──────────────────────────────────────────────
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def tadd(self, ctx, member: discord.Member):
         ticket = get_ticket(ctx.guild.id, ctx.channel.id)
         if not ticket:

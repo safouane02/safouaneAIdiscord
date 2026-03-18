@@ -31,16 +31,30 @@ async def init_db():
                 xp_cooldown     INTEGER DEFAULT 60,
                 xp_boost        REAL    DEFAULT 1.0,
                 level_channel   INTEGER DEFAULT NULL,
-                level_up_msg    TEXT    DEFAULT NULL
+                level_up_msg    TEXT    DEFAULT NULL,
+                log_channel_id  INTEGER DEFAULT NULL
+            );
+
+            CREATE TABLE IF NOT EXISTS automod_settings (
+                guild_id        INTEGER PRIMARY KEY,
+                enabled         INTEGER DEFAULT 0,
+                banned_words    TEXT    DEFAULT '[]',
+                spam_enabled    INTEGER DEFAULT 1,
+                invite_filter   INTEGER DEFAULT 1,
+                caps_filter     INTEGER DEFAULT 1
             );
         """)
-        # migrate old DB if columns missing
-        try:
-            await db.execute("ALTER TABLE guild_settings ADD COLUMN xp_boost REAL DEFAULT 1.0")
-        except Exception:
-            pass
-        try:
-            await db.execute("ALTER TABLE guild_settings ADD COLUMN level_up_msg TEXT DEFAULT NULL")
-        except Exception:
-            pass
+
+        # migrate existing DBs
+        migrations = [
+            "ALTER TABLE guild_settings ADD COLUMN xp_boost REAL DEFAULT 1.0",
+            "ALTER TABLE guild_settings ADD COLUMN level_up_msg TEXT DEFAULT NULL",
+            "ALTER TABLE guild_settings ADD COLUMN log_channel_id INTEGER DEFAULT NULL",
+        ]
+        for sql in migrations:
+            try:
+                await db.execute(sql)
+            except Exception:
+                pass
+
         await db.commit()

@@ -26,7 +26,8 @@ async def handle_reply(message: discord.Message):
             system_prompt = get_personality(user_id)
             server_context = await build_server_context(message)
 
-            reply = await ask_groq(user_input, history, system_prompt, server_context)
+            guild_id = message.guild.id if message.guild else None
+            reply = await ask_groq(user_input, history, system_prompt, server_context, guild_id=guild_id)
 
             add_message(user_id, "user", user_input)
             add_message(user_id, "assistant", reply)
@@ -37,8 +38,12 @@ async def handle_reply(message: discord.Message):
                 await message.reply(chunk, mention_author=False)
 
         except Exception as e:
-            log.error(f"Reply handler error for {user_id}: {e}")
-            await message.reply("⚠️ Something went wrong, please try again.", mention_author=False)
+            from src.services.groq_service import TokenLimitError
+            if isinstance(e, TokenLimitError):
+                await message.reply(str(e), mention_author=False)
+            else:
+                log.error(f"Reply handler error for {user_id}: {e}")
+                await message.reply("⚠️ Something went wrong, please try again.", mention_author=False)
 
 
 def _split_message(text: str, limit: int = 1900) -> list[str]:

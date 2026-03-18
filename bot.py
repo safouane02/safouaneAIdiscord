@@ -8,16 +8,34 @@ from src.config import config
 from src.handlers.reply_handler import handle_reply
 from src.handlers.dm_handler import handle_dm
 from src.services.database import init_db
+from src.services.premium import init_premium_table
+from src.services.reaction_roles import init_reaction_roles_table
+from src.services.backup import create_backup, backup_loop
 from src.services.logger import get_logger
 
 load_dotenv()
 log = get_logger("bot")
+
+EXTENSIONS = [
+    "src.handlers.commands",
+    "src.handlers.mod_commands",
+    "src.handlers.admin_commands",
+    "src.handlers.ticket_commands",
+    "src.handlers.broadcast",
+    "src.handlers.level_commands",
+    "src.handlers.automod_commands",
+    "src.handlers.slash_mod",
+    "src.handlers.welcome",
+    "src.handlers.reaction_roles",
+    "src.handlers.premium_commands",
+]
 
 
 def create_bot() -> commands.Bot:
     intents = discord.Intents.default()
     intents.message_content = True
     intents.members = True
+    intents.reactions = True
 
     return commands.Bot(
         command_prefix=config.prefix,
@@ -32,12 +50,24 @@ bot = create_bot()
 @bot.event
 async def on_ready():
     log.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
+    log.info(f"Serving {len(bot.guilds)} servers")
+
+    try:
+        synced = await bot.tree.sync()
+        log.info(f"Synced {len(synced)} slash commands")
+    except Exception as e:
+        log.error(f"Failed to sync slash commands: {e}")
+
     await bot.change_presence(
         activity=discord.Activity(
             type=discord.ActivityType.listening,
-            name="!help",
+            name="/help",
         )
     )
+
+    # start daily backup
+    create_backup()
+    bot.loop.create_task(backup_loop())
 
 
 @bot.event
@@ -56,7 +86,6 @@ async def on_message(message: discord.Message):
     if message.content.startswith(config.prefix):
         return
 
-    # AI moderation — bot mentioned with a target user
     if message.guild and bot.user in message.mentions:
         has_target = any(m for m in message.mentions if not m.bot and m != bot.user)
         if has_target and message.author.guild_permissions.kick_members:
@@ -65,7 +94,6 @@ async def on_message(message: discord.Message):
                 await mod_cog.process_ai_mod(message)
             return
 
-    # reply-based AI conversation
     if message.reference:
         try:
             ref = await message.channel.fetch_message(message.reference.message_id)
@@ -79,22 +107,27 @@ async def on_message(message: discord.Message):
 async def on_command_error(ctx: commands.Context, error: commands.CommandError):
     if isinstance(error, commands.CommandNotFound):
         return
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.reply("⛔ You don't have permission.", mention_author=False)
+        return
     if isinstance(error, commands.MissingRequiredArgument):
-        await ctx.reply(f"⚠️ Missing argument: `{error.param.name}`", mention_author=False)
+        await ctx.reply(f"⚠️ Missing: `{error.param.name}`", mention_author=False)
         return
     log.error(f"Command error in {ctx.command}: {error}")
 
 
 async def main():
     await init_db()
+    await init_premium_table()
+    await init_reaction_roles_table()
 
     async with bot:
-        await bot.load_extension("src.handlers.commands")
-        await bot.load_extension("src.handlers.mod_commands")
-        await bot.load_extension("src.handlers.admin_commands")
-        await bot.load_extension("src.handlers.ticket_commands")
-        await bot.load_extension("src.handlers.broadcast")
-        await bot.load_extension("src.handlers.level_commands")
+        for ext in EXTENSIONS:
+            try:
+                await bot.load_extension(ext)
+                log.info(f"Loaded {ext.split('.')[-1]}")
+            except Exception as e:
+                log.error(f"Failed to load {ext}: {e}")
 
         token = os.getenv("DISCORD_TOKEN")
         if not token:

@@ -65,12 +65,17 @@ def _compress_history(history: list[dict], max_pairs: int = 4) -> list[dict]:
     return history[-(max_pairs * 2):]
 
 
+class TokenLimitError(Exception):
+    pass
+
+
 async def ask_groq(
     user_message: str,
     history: list[dict] = None,
     system_prompt: str = None,
     server_context: str = None,
     use_cache: bool = True,
+    guild_id: int = None,
 ) -> str:
     # check cache for short/simple questions with no history
     if use_cache and not history:
@@ -84,7 +89,20 @@ async def ask_groq(
     if server_context:
         smart_prompt = f"{smart_prompt}\n\n{server_context}"
 
-    model = _pick_model(user_message)
+    # use premium model if server has premium
+    if guild_id:
+        try:
+            from src.services.premium import get_features
+            features = await get_features(guild_id)
+            premium_model = features.get("ai_model")
+            if premium_model and premium_model in MODELS:
+                model = MODELS[premium_model]
+            else:
+                model = _pick_model(user_message)
+        except Exception:
+            model = _pick_model(user_message)
+    else:
+        model = _pick_model(user_message)
     compressed_history = _compress_history(history or [])
 
     messages = [
@@ -93,13 +111,29 @@ async def ask_groq(
         {"role": "user", "content": user_message},
     ]
 
+    # check daily token limit
+    if guild_id:
+        try:
+            from src.services.premium import check_token_limit, add_token_usage, get_plan, WEBSITE_URL
+            can_use, used, limit = await check_token_limit(guild_id)
+            if not can_use:
+                plan = await get_plan(guild_id)
+                raise TokenLimitError(
+                    f"⚠️ لقد وصل السيرفر لحد الـ AI اليومي (**{limit:,}** token)\n"
+                    f"الخطة الحالية: **{plan['name']} {plan['emoji']}**\n"
+                    f"للترقية وزيادة الحد: **{WEBSITE_URL}**"
+                )
+        except TokenLimitError:
+            raise
+        except Exception as e:
+            log.warning(f"Token limit check failed: {e}")
+
     api_key = pool.next_key()
     client = AsyncGroq(api_key=api_key)
 
     log.info(
         f"Model: {model.split('/')[-1]} | "
         f"Key #{pool._current_index}/{pool.count} | "
-        f"Tokens est: ~{len(smart_prompt.split()) + len(user_message.split())} | "
         f"Msg: {user_message[:40]!r}"
     )
 
@@ -111,6 +145,15 @@ async def ask_groq(
             temperature=0.7,
         )
         answer = response.choices[0].message.content
+
+        # track token usage
+        if guild_id:
+            try:
+                from src.services.premium import add_token_usage
+                tokens_used = response.usage.total_tokens if response.usage else len(answer.split()) * 2
+                await add_token_usage(guild_id, tokens_used)
+            except Exception:
+                pass
 
         # cache only if no history (generic question)
         if use_cache and not history:

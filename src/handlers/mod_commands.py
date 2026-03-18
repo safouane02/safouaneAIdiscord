@@ -373,6 +373,7 @@ class ModerationCog(commands.Cog):
     # ── Info commands ──────────────────────────────────────
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def serverinfo(self, ctx):
         g = ctx.guild
         embed = discord.Embed(title=g.name, color=0x5865F2)
@@ -385,6 +386,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def userinfo(self, ctx, member: discord.Member = None):
         member = member or ctx.author
         embed = discord.Embed(title=str(member), color=member.color)
@@ -397,10 +399,12 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def whois(self, ctx, member: discord.Member = None):
         await self.userinfo(ctx, member)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def avatar(self, ctx, member: discord.Member = None):
         member = member or ctx.author
         embed = discord.Embed(title=f"{member}'s Avatar", color=0x5865F2)
@@ -408,6 +412,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def banner(self, ctx, member: discord.Member = None):
         member = member or ctx.author
         user = await self.bot.fetch_user(member.id)
@@ -419,6 +424,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def servericon(self, ctx):
         if not ctx.guild.icon:
             await ctx.send("⚠️ This server has no icon.")
@@ -428,6 +434,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def membercount(self, ctx):
         g = ctx.guild
         bots = sum(1 for m in g.members if m.bot)
@@ -439,6 +446,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def channelinfo(self, ctx, channel: discord.TextChannel = None):
         channel = channel or ctx.channel
         embed = discord.Embed(title=f"#{channel.name}", color=0x5865F2)
@@ -449,6 +457,7 @@ class ModerationCog(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    @commands.has_permissions(administrator=True)
     async def invite(self, ctx):
         link = await ctx.channel.create_invite(max_age=3600)
         await ctx.send(f"🔗 Invite link (expires in 1h): {link}")

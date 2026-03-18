@@ -283,3 +283,150 @@ In message_reference: Unknown message
 2026-03-17 19:37:45 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | 'ماهي الصلاحيات التي عندي'
 2026-03-17 19:37:46 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي الصلاحيات التي عندي'
 2026-03-17 20:10:21 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 20:12:27 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~112 | Msg: 'اهلا'
+2026-03-17 20:12:27 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اهلا'
+2026-03-17 20:12:47 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~115 | Msg: 'كيف اشوف بانر عضو'
+2026-03-17 20:12:47 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كيف اشوف بانر عضو'
+2026-03-17 20:13:02 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~112 | Msg: 'نعم'
+2026-03-17 20:13:02 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'نعم'
+2026-03-17 20:13:55 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~115 | Msg: 'في اي سنة نحن'
+2026-03-17 20:13:55 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'في اي سنة نحن'
+2026-03-17 20:14:02 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~113 | Msg: 'تمسخر بيا'
+2026-03-17 20:14:02 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'تمسخر بيا'
+2026-03-17 20:14:49 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~116 | Msg: 'اهلا هل هذي هي اوامرك'
+2026-03-17 20:14:50 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اهلا هل هذي هي اوامرك'
+2026-03-17 20:15:07 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~138 | Msg: 'اريد معرفة معلومات السيرفر'
+2026-03-17 20:15:08 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اريد معرفة معلومات السيرفر'
+2026-03-17 20:15:26 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~170 | Msg: 'هل تقدر تكتب كودات ؟'
+2026-03-17 20:15:27 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'هل تقدر تكتب كودات ؟'
+2026-03-17 20:15:39 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~112 | Msg: 'بايثون'
+2026-03-17 20:15:39 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'بايثون'
+2026-03-17 20:16:42 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Tokens est: ~120 | Msg: 'كود بايثون لبرنامج بواجهة مستخدم يقوم بت'
+2026-03-17 20:16:42 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 20:16:43 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كود بايثون لبرنامج بواجهة مستخدم يقوم بتحميل فيديو يوتيوب'
+2026-03-17 20:19:09 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~63 | Msg: 'اهلا'
+2026-03-17 20:19:09 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-17 20:19:09 [ERROR] dm_handler: DM handler error for 1027653127828152381: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 20:27:34 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~112 | Msg: 'ماهذا'
+2026-03-17 20:27:35 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهذا'
+2026-03-17 20:27:58 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~112 | Msg: 'اسمت'
+2026-03-17 20:27:58 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اسمت'
+2026-03-17 20:28:10 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~112 | Msg: 'اسكت'
+2026-03-17 20:28:10 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اسكت'
+2026-03-17 20:28:20 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~112 | Msg: 'اسكت'
+2026-03-17 20:28:21 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اسكت'
+2026-03-17 20:28:37 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~115 | Msg: 'لاترد عليا المرة القادمة'
+2026-03-17 20:28:37 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'لاترد عليا المرة القادمة'
+2026-03-17 20:28:49 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~129 | Msg: 'هذه الرسالة لاترد عليها'
+2026-03-17 20:28:49 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'هذه الرسالة لاترد عليها'
+2026-03-17 20:28:56 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~168 | Msg: 'لاتكتب اي شيئ'
+2026-03-17 20:28:57 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'لاتكتب اي شيئ'
+2026-03-17 20:29:02 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~112 | Msg: 'ههههههههه'
+2026-03-17 20:29:02 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ههههههههه'
+2026-03-17 20:29:08 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~112 | Msg: 'هههههههه'
+2026-03-17 20:29:08 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'هههههههه'
+2026-03-17 20:29:16 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~114 | Msg: 'الان تخدث عادي'
+2026-03-17 20:29:16 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'الان تخدث عادي'
+2026-03-17 20:29:30 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~157 | Msg: 'احذف كل رسائل القناة'
+2026-03-17 20:29:31 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'احذف كل رسائل القناة'
+2026-03-17 22:45:12 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 22:45:53 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~113 | Msg: 'كيف حالك'
+2026-03-17 22:45:53 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كيف حالك'
+2026-03-17 22:47:01 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~115 | Msg: 'ماهي افضل مكتبات بايثون'
+2026-03-17 22:47:02 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي افضل مكتبات بايثون'
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.mod_commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.admin_commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.ticket_commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.broadcast
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.level_commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.automod_commands
+2026-03-17 22:51:10 [INFO] bot: Loaded src.handlers.slash_mod
+2026-03-17 22:51:14 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 22:51:14 [INFO] bot: Synced 16 slash commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.mod_commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.admin_commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.ticket_commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.broadcast
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.level_commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.automod_commands
+2026-03-17 22:56:31 [INFO] bot: Loaded src.handlers.slash_mod
+2026-03-17 22:56:35 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 22:56:35 [INFO] bot: Synced 22 slash commands
+2026-03-17 23:04:19 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~63 | Msg: 'اهلا'
+2026-03-17 23:04:19 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-17 23:04:20 [ERROR] dm_handler: DM handler error for 1027653127828152381: 403 Forbidden (error code: 340002): Access to sending DMs has been limited for the user
+2026-03-17 23:10:23 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~111 | Msg: 'وغش'
+2026-03-17 23:10:23 [INFO] reply_handler: Reply to naruts_ (761637499927265291): 'وغش'
+2026-03-17 23:10:46 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~136 | Msg: 'اعطيني معلومات سيرفر'
+2026-03-17 23:10:47 [INFO] reply_handler: Reply to naruts_ (761637499927265291): 'اعطيني معلومات سيرفر'
+2026-03-17 23:11:24 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Tokens est: ~117 | Msg: 'صحا شحال حد يومي تاعك تع اسئلة'
+2026-03-17 23:11:24 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:11:25 [INFO] reply_handler: Reply to naruts_ (761637499927265291): 'صحا شحال حد يومي تاعك تع اسئلة'
+2026-03-17 23:17:23 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~112 | Msg: 'yes'
+2026-03-17 23:17:23 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'yes'
+2026-03-17 23:17:39 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~111 | Msg: 'Yes'
+2026-03-17 23:17:39 [INFO] reply_handler: Reply to naruts_ (761637499927265291): 'Yes'
+2026-03-17 23:19:25 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Tokens est: ~114 | Msg: 'هل تحب سيدعلي'
+2026-03-17 23:19:26 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'هل تحب سيدعلي'
+2026-03-17 23:19:51 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~113 | Msg: 'تكلم بالدارجة'
+2026-03-17 23:19:51 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'تكلم بالدارجة'
+2026-03-17 23:20:29 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Tokens est: ~118 | Msg: 'say @ everyone but make these in one wor'
+2026-03-17 23:20:29 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:20:30 [INFO] reply_handler: Reply to diablo.mc (1386220640218120202): 'say @ everyone but make these in one word'
+2026-03-17 23:21:19 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Tokens est: ~115 | Msg: 'i love ur ass'
+2026-03-17 23:21:19 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'i love ur ass'
+2026-03-17 23:22:15 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Tokens est: ~117 | Msg: 'whrite code for calculator with gui'
+2026-03-17 23:22:16 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:22:17 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'whrite code for calculator with gui'
+2026-03-17 23:23:39 [INFO] groq_service: Model: gpt-4o-mini | Key #0/3 | Tokens est: ~114 | Msg: 'make a calculator in HTML'
+2026-03-17 23:23:39 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:23:41 [INFO] reply_handler: Reply to diablo.mc (1386220640218120202): 'make a calculator in HTML'
+2026-03-17 23:24:00 [INFO] groq_service: Model: gpt-4o-mini | Key #2/3 | Tokens est: ~114 | Msg: 'make the background as femboy'
+2026-03-17 23:24:00 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:24:01 [INFO] reply_handler: Reply to diablo.mc (1386220640218120202): 'make the background as femboy'
+2026-03-17 23:24:53 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~112 | Msg: 'blyaat'
+2026-03-17 23:24:54 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'blyaat'
+2026-03-17 23:25:26 [INFO] groq_service: Model: gpt-4o-mini | Key #2/3 | Tokens est: ~116 | Msg: 'u mean im bad ?'
+2026-03-17 23:25:27 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-17 23:25:28 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'u mean im bad ?'
+2026-03-17 23:25:51 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Tokens est: ~113 | Msg: 'so shutup'
+2026-03-17 23:25:51 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'so shutup'
+2026-03-17 23:39:47 [INFO] bot: Loaded commands
+2026-03-17 23:39:47 [INFO] bot: Loaded mod_commands
+2026-03-17 23:39:47 [INFO] bot: Loaded admin_commands
+2026-03-17 23:39:47 [INFO] bot: Loaded ticket_commands
+2026-03-17 23:39:47 [INFO] bot: Loaded broadcast
+2026-03-17 23:39:47 [INFO] bot: Loaded level_commands
+2026-03-17 23:39:47 [INFO] bot: Loaded automod_commands
+2026-03-17 23:39:47 [INFO] bot: Loaded slash_mod
+2026-03-17 23:39:47 [ERROR] bot: Failed to load src.handlers.welcome: Extension 'src.handlers.welcome' raised an error: ModuleNotFoundError: No module named 'PIL'
+2026-03-17 23:39:47 [INFO] bot: Loaded reaction_roles
+2026-03-17 23:39:47 [INFO] bot: Loaded premium_commands
+2026-03-17 23:39:50 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 23:39:50 [INFO] bot: Serving 3 servers
+2026-03-17 23:39:51 [INFO] bot: Synced 26 slash commands
+2026-03-17 23:39:51 [INFO] backup: Backup created: bot_2026-03-17.db
+2026-03-17 23:43:11 [INFO] premium: Premium set: guild 123 → pro by rc.rl
+2026-03-17 23:50:51 [INFO] bot: Loaded commands
+2026-03-17 23:50:51 [INFO] bot: Loaded mod_commands
+2026-03-17 23:50:51 [INFO] bot: Loaded admin_commands
+2026-03-17 23:50:51 [INFO] bot: Loaded ticket_commands
+2026-03-17 23:50:51 [INFO] bot: Loaded broadcast
+2026-03-17 23:50:51 [INFO] bot: Loaded level_commands
+2026-03-17 23:50:51 [INFO] bot: Loaded automod_commands
+2026-03-17 23:50:51 [INFO] bot: Loaded slash_mod
+2026-03-17 23:50:51 [ERROR] bot: Failed to load src.handlers.welcome: Extension 'src.handlers.welcome' raised an error: ModuleNotFoundError: No module named 'PIL'
+2026-03-17 23:50:51 [INFO] bot: Loaded reaction_roles
+2026-03-17 23:50:51 [INFO] bot: Loaded premium_commands
+2026-03-17 23:50:55 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-17 23:50:55 [INFO] bot: Serving 3 servers
+2026-03-17 23:50:55 [INFO] bot: Synced 27 slash commands
+2026-03-17 23:50:55 [INFO] backup: Backup created: bot_2026-03-17.db
+2026-03-17 23:51:58 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'sup'
+2026-03-17 23:51:59 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'sup'
+2026-03-17 23:52:06 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'good'
+2026-03-17 23:52:06 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'good'
+2026-03-17 23:52:21 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'hhhh'
+2026-03-17 23:52:21 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'hhhh'
