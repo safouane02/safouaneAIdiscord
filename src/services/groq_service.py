@@ -10,10 +10,10 @@ log = get_logger("groq_service")
 
 MODELS = {
     "fast":     "meta-llama/llama-4-scout-17b-16e-instruct",
-    "light":    "openai/gpt-4o-mini",
+    "light":    "openai/gpt-oss-20b",
     "balanced": "llama-3.3-70b-versatile",
     "smart":    "moonshotai/kimi-k2-instruct",
-    "heavy":    "openai/gpt-4o",
+    "heavy":    "openai/gpt-oss-120b",
 }
 
 _COMPLEX = [

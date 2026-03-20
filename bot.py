@@ -1,5 +1,7 @@
 import os
 import asyncio
+import threading
+import uvicorn
 import discord
 from discord.ext import commands
 from dotenv import load_dotenv
@@ -47,6 +49,17 @@ def create_bot() -> commands.Bot:
 bot = create_bot()
 
 
+def start_api():
+    """Run FastAPI in a background thread."""
+    try:
+        import api
+        api.set_bot(bot)
+        port = int(os.getenv("API_PORT", "8000"))
+        uvicorn.run(api.app, host="0.0.0.0", port=port, log_level="warning")
+    except Exception as e:
+        log.error(f"API server error: {e}")
+
+
 @bot.event
 async def on_ready():
     log.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
@@ -65,7 +78,6 @@ async def on_ready():
         )
     )
 
-    # start daily backup
     create_backup()
     bot.loop.create_task(backup_loop())
 
@@ -120,6 +132,12 @@ async def main():
     await init_db()
     await init_premium_table()
     await init_reaction_roles_table()
+
+    # start API server in background thread
+    if os.getenv("ENABLE_API", "true").lower() == "true":
+        api_thread = threading.Thread(target=start_api, daemon=True)
+        api_thread.start()
+        log.info(f"API server started on port {os.getenv('API_PORT', '8000')}")
 
     async with bot:
         for ext in EXTENSIONS:

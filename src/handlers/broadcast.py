@@ -13,22 +13,28 @@ class BroadcastCog(commands.Cog):
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def dm(self, ctx, target: str = None, *, message: str = None):
+        from src.services.premium import get_plan, WEBSITE_URL
+
+        plan = await get_plan(ctx.guild.id)
+        tier = plan.get("name", "Free").lower()
+
+        if tier not in ["basic", "pro", "elite"]:
+            msg = "This command requires Basic plan or higher. Upgrade: " + WEBSITE_URL
+            await ctx.reply(msg, mention_author=False)
+            return
+
         if not target or not message:
-            embed = discord.Embed(title="📨 DM Broadcast", color=0x5865F2)
+            embed = discord.Embed(title="DM Broadcast", color=0x5865F2)
             embed.add_field(
                 name="Usage",
                 value=(
-                    "`!dm all <message>` — DM everyone\n"
-                    "`!dm @role <message>` — DM role members\n"
-                    "`!dm humans <message>` — DM all non-bots"
+                    "`!dm all <message>` - DM everyone\n"
+                    "`!dm @role <message>` - DM role members\n"
+                    "`!dm humans <message>` - DM all non-bots"
                 ),
                 inline=False,
             )
-            embed.add_field(
-                name="Example",
-                value="`!dm all السيرفر سيكون في صيانة الساعة 10`",
-                inline=False,
-            )
+            embed.add_field(name="Example", value="`!dm all Server maintenance at 10PM`", inline=False)
             await ctx.reply(embed=embed, mention_author=False)
             return
 
@@ -43,49 +49,41 @@ class BroadcastCog(commands.Cog):
                 role_id = int(target.strip("<@&>"))
                 role = guild.get_role(role_id)
                 if not role:
-                    await ctx.reply("⚠️ Role not found.", mention_author=False)
+                    await ctx.reply("Role not found.", mention_author=False)
                     return
                 members = [m for m in role.members if not m.bot]
             except ValueError:
-                await ctx.reply("⚠️ Invalid role mention.", mention_author=False)
+                await ctx.reply("Invalid role mention.", mention_author=False)
                 return
         else:
-            await ctx.reply(
-                "⚠️ Invalid target. Use `all`, `humans`, or `@role`.",
-                mention_author=False,
-            )
+            await ctx.reply("Invalid target. Use `all`, `humans`, or `@role`.", mention_author=False)
             return
 
         if not members:
-            await ctx.reply("⚠️ No members found.", mention_author=False)
+            await ctx.reply("No members found.", mention_author=False)
             return
 
-        # show confirmation with buttons instead of wait_for
         embed = discord.Embed(
-            title="📨 Confirm Broadcast",
-            description=(
-                f"**Target:** {len(members)} members\n"
-                f"**Message preview:**\n> {message[:300]}"
-            ),
+            title="Confirm Broadcast",
+            description="Target: **" + str(len(members)) + "** members\nMessage: " + message[:200],
             color=0xFFA500,
         )
-        embed.set_footer(text="This action cannot be undone")
+        embed.set_footer(text="This cannot be undone")
 
         view = ConfirmView()
         confirm_msg = await ctx.reply(embed=embed, view=view, mention_author=False)
-
         await view.wait()
 
         if not view.confirmed:
             await confirm_msg.edit(
-                embed=discord.Embed(description="❌ Broadcast cancelled.", color=0xED4245),
+                embed=discord.Embed(description="Broadcast cancelled.", color=0xED4245),
                 view=None,
             )
             return
 
         await confirm_msg.edit(
             embed=discord.Embed(
-                description=f"📨 Sending to **{len(members)}** members...",
+                description="Sending to **" + str(len(members)) + "** members...",
                 color=0x5865F2,
             ),
             view=None,
@@ -93,7 +91,7 @@ class BroadcastCog(commands.Cog):
 
         dm_embed = discord.Embed(description=message, color=0x5865F2)
         dm_embed.set_author(name=guild.name, icon_url=guild.icon.url if guild.icon else None)
-        dm_embed.set_footer(text=f"Sent by {ctx.author} • {guild.name}")
+        dm_embed.set_footer(text="Sent by " + str(ctx.author) + " - " + guild.name)
 
         sent = 0
         failed = 0
@@ -108,21 +106,17 @@ class BroadcastCog(commands.Cog):
             if (sent + failed) % 10 == 0:
                 await asyncio.sleep(1)
 
-        result_embed = discord.Embed(
-            title="✅ Broadcast Complete",
-            color=0x57F287,
-        )
+        result_embed = discord.Embed(title="Broadcast Complete", color=0x57F287)
         result_embed.add_field(name="Sent", value=str(sent), inline=True)
-        result_embed.add_field(name="Failed (DMs closed)", value=str(failed), inline=True)
-
+        result_embed.add_field(name="Failed", value=str(failed), inline=True)
         await confirm_msg.edit(embed=result_embed)
-        log.info(f"Broadcast by {ctx.author} — {sent} sent, {failed} failed")
+        log.info("Broadcast by " + str(ctx.author) + " - " + str(sent) + " sent, " + str(failed) + " failed")
 
     async def cog_command_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):
-            await ctx.reply("⛔ You need Administrator permission.", mention_author=False)
+            await ctx.reply("You need Administrator permission.", mention_author=False)
         else:
-            log.error(f"Broadcast error: {error}")
+            log.error("Broadcast error: " + str(error))
 
 
 class ConfirmView(discord.ui.View):

@@ -69,8 +69,16 @@
         "moderator_id": 1027653127828152381,
         "reason": "\u0631\u0623\u0633\u0647 \u0643\u0628\u064a\u0631",
         "timestamp": "2026-03-17T22:17:22.631230"
+      },
+      {
+        "id": 2,
+        "action": "kick",
+        "target_id": 159985870458322944,
+        "moderator_id": 1027653127828152381,
+        "reason": "[AI] No reason provided",
+        "timestamp": "2026-03-18T15:06:56.789893"
       }
     ],
-    "next_id": 2
+    "next_id": 3
   }
 }

@@ -430,3 +430,464 @@ In message_reference: Unknown message
 2026-03-17 23:52:06 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'good'
 2026-03-17 23:52:21 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'hhhh'
 2026-03-17 23:52:21 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'hhhh'
+2026-03-18 13:01:03 [INFO] bot: Loaded commands
+2026-03-18 13:01:03 [INFO] bot: Loaded mod_commands
+2026-03-18 13:01:03 [INFO] bot: Loaded admin_commands
+2026-03-18 13:01:03 [INFO] bot: Loaded ticket_commands
+2026-03-18 13:01:03 [INFO] bot: Loaded broadcast
+2026-03-18 13:01:03 [INFO] bot: Loaded level_commands
+2026-03-18 13:01:03 [INFO] bot: Loaded automod_commands
+2026-03-18 13:01:03 [INFO] bot: Loaded slash_mod
+2026-03-18 13:01:03 [ERROR] bot: Failed to load src.handlers.welcome: Extension 'src.handlers.welcome' raised an error: ModuleNotFoundError: No module named 'PIL'
+2026-03-18 13:01:03 [INFO] bot: Loaded reaction_roles
+2026-03-18 13:01:03 [INFO] bot: Loaded premium_commands
+2026-03-18 13:01:06 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-18 13:01:06 [INFO] bot: Serving 3 servers
+2026-03-18 13:01:07 [INFO] bot: Synced 27 slash commands
+2026-03-18 13:01:07 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 13:05:42 [INFO] bot: Loaded commands
+2026-03-18 13:05:42 [INFO] bot: Loaded mod_commands
+2026-03-18 13:05:42 [INFO] bot: Loaded admin_commands
+2026-03-18 13:05:42 [INFO] bot: Loaded ticket_commands
+2026-03-18 13:05:42 [INFO] bot: Loaded broadcast
+2026-03-18 13:05:42 [INFO] bot: Loaded level_commands
+2026-03-18 13:05:42 [INFO] bot: Loaded automod_commands
+2026-03-18 13:05:42 [INFO] bot: Loaded slash_mod
+2026-03-18 13:05:42 [ERROR] bot: Failed to load src.handlers.welcome: Extension 'src.handlers.welcome' raised an error: ModuleNotFoundError: No module named 'PIL'
+2026-03-18 13:05:42 [INFO] bot: Loaded reaction_roles
+2026-03-18 13:05:42 [INFO] bot: Loaded premium_commands
+2026-03-18 13:05:46 [INFO] bot: Logged in as safouaneAI#4441 (ID: 1483233709200244797)
+2026-03-18 13:05:46 [INFO] bot: Serving 3 servers
+2026-03-18 13:05:46 [INFO] bot: Synced 27 slash commands
+2026-03-18 13:05:46 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 14:18:24 [INFO] bot: API server started on port 8000
+2026-03-18 14:18:24 [INFO] bot: Loaded commands
+2026-03-18 14:18:24 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-18 14:18:24 [INFO] bot: Loaded mod_commands
+2026-03-18 14:18:24 [INFO] bot: Loaded admin_commands
+2026-03-18 14:18:24 [INFO] bot: Loaded ticket_commands
+2026-03-18 14:18:24 [INFO] bot: Loaded broadcast
+2026-03-18 14:18:24 [INFO] bot: Loaded level_commands
+2026-03-18 14:18:24 [INFO] bot: Loaded automod_commands
+2026-03-18 14:18:24 [INFO] bot: Loaded slash_mod
+2026-03-18 14:18:24 [INFO] bot: Loaded welcome
+2026-03-18 14:18:24 [INFO] bot: Loaded reaction_roles
+2026-03-18 14:18:24 [INFO] bot: Loaded premium_commands
+2026-03-18 14:18:28 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-18 14:18:28 [INFO] bot: Serving 6 servers
+2026-03-18 14:18:29 [INFO] bot: Synced 30 slash commands
+2026-03-18 14:18:29 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 14:19:14 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'كيفك'
+2026-03-18 14:19:15 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'كيفك'
+2026-03-18 14:19:23 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'الحمد للله'
+2026-03-18 14:19:24 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'الحمد للله'
+2026-03-18 14:39:37 [INFO] levels: adventurous_mango_65514 leveled up to 1 in 𝐃𝐀𝐕𝐘.𝐃 x 𝗦𝗞
+2026-03-18 14:39:54 [INFO] whitelist: Added user 761637499927265291 to DM whitelist
+2026-03-18 14:39:55 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'test123'
+2026-03-18 14:39:55 [INFO] admin_commands: Owner added user 761637499927265291 to whitelist
+2026-03-18 14:39:55 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-18 14:43:30 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'we'
+2026-03-18 14:43:30 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'we'
+2026-03-18 14:44:20 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'مرحبا'
+2026-03-18 14:44:21 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'مرحبا'
+2026-03-18 14:44:40 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'تعرف ف برمجة ؟'
+2026-03-18 14:44:40 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'تعرف ف برمجة ؟'
+2026-03-18 14:45:04 [INFO] groq_service: Model: kimi-k2-instruct | Key #1/3 | Msg: 'اكتب لي كود جافا سكريبت'
+2026-03-18 14:45:06 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'اكتب لي كود جافا سكريبت'
+2026-03-18 14:45:58 [INFO] groq_service: Model: gpt-4o-mini | Key #2/3 | Msg: 'اصنع لي صفحة تبع تسجيل دخول ب HTML  و زي'
+2026-03-18 14:45:58 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 14:46:00 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'اصنع لي صفحة تبع تسجيل دخول ب HTML  و زينها ب CSS'
+2026-03-18 15:08:02 [INFO] levels: soka_.777 leveled up to 1 in 𝐃𝐀𝐕𝐘.𝐃 x 𝗦𝗞
+2026-03-18 15:24:17 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'من انت'
+2026-03-18 15:24:17 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'من انت'
+2026-03-18 15:32:50 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'هل ادفع لتحدث معك'
+2026-03-18 15:32:50 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل ادفع لتحدث معك'
+2026-03-18 15:33:04 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'ماهي خطتك المجانية والمدفوعة'
+2026-03-18 15:33:04 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ماهي خطتك المجانية والمدفوعة'
+2026-03-18 15:33:25 [ERROR] commands: Slash error in commands: Command 'help' raised an exception: AttributeError: 'User' object has no attribute 'guild_permissions'
+2026-03-18 15:33:34 [ERROR] commands: Slash error in commands: Command 'help' raised an exception: AttributeError: 'User' object has no attribute 'guild_permissions'
+2026-03-18 15:33:44 [ERROR] commands: Slash error in commands: Command 'help' raised an exception: AttributeError: 'User' object has no attribute 'guild_permissions'
+2026-03-18 15:45:06 [INFO] premium: Premium set: guild 123 → pro by rc.rl
+2026-03-18 15:48:44 [INFO] premium: Premium set: guild 1420640811066068994 → pro by rc.rl
+2026-03-18 15:49:03 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Msg: '<@1451275017328394373> يابوت اطرد <@1599'
+2026-03-18 15:49:03 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 15:49:04 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): '<@1451275017328394373> يابوت اطرد <@159985870458322944> لانه'
+2026-03-18 15:52:41 [INFO] groq_service: Model: gpt-4o-mini | Key #0/3 | Msg: 'اريد منك انت ان تطرده'
+2026-03-18 15:52:41 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 15:52:43 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'اريد منك انت ان تطرده'
+2026-03-18 15:55:28 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'ماهي كل اوامرك'
+2026-03-18 15:55:29 [INFO] reply_handler: Reply to rc.rl (1027653127828152381): 'ماهي كل اوامرك'
+2026-03-18 16:04:34 [INFO] bot: API server started on port 8000
+2026-03-18 16:04:34 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-18 16:04:34 [INFO] bot: Loaded commands
+2026-03-18 16:04:34 [INFO] bot: Loaded mod_commands
+2026-03-18 16:04:34 [INFO] bot: Loaded admin_commands
+2026-03-18 16:04:34 [INFO] bot: Loaded ticket_commands
+2026-03-18 16:04:34 [INFO] bot: Loaded broadcast
+2026-03-18 16:04:34 [INFO] bot: Loaded level_commands
+2026-03-18 16:04:34 [INFO] bot: Loaded automod_commands
+2026-03-18 16:04:34 [INFO] bot: Loaded slash_mod
+2026-03-18 16:04:34 [INFO] bot: Loaded welcome
+2026-03-18 16:04:34 [INFO] bot: Loaded reaction_roles
+2026-03-18 16:04:34 [INFO] bot: Loaded premium_commands
+2026-03-18 16:04:38 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-18 16:04:38 [INFO] bot: Serving 6 servers
+2026-03-18 16:04:38 [INFO] bot: Synced 30 slash commands
+2026-03-18 16:04:38 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 16:06:45 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:06:55 [INFO] agent_handler: Agent action: kick_member | User: rc.rl | Target: 159985870458322944
+2026-03-18 16:07:11 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:09:01 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:11:38 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:14:58 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:20:02 [INFO] bot: API server started on port 8000
+2026-03-18 16:20:02 [INFO] bot: Loaded commands
+2026-03-18 16:20:02 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-18 16:20:02 [INFO] bot: Loaded mod_commands
+2026-03-18 16:20:02 [INFO] bot: Loaded admin_commands
+2026-03-18 16:20:02 [INFO] bot: Loaded ticket_commands
+2026-03-18 16:20:02 [INFO] bot: Loaded broadcast
+2026-03-18 16:20:02 [INFO] bot: Loaded level_commands
+2026-03-18 16:20:02 [INFO] bot: Loaded automod_commands
+2026-03-18 16:20:03 [INFO] bot: Loaded slash_mod
+2026-03-18 16:20:03 [INFO] bot: Loaded welcome
+2026-03-18 16:20:03 [INFO] bot: Loaded reaction_roles
+2026-03-18 16:20:03 [INFO] bot: Loaded premium_commands
+2026-03-18 16:20:07 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-18 16:20:07 [INFO] bot: Serving 6 servers
+2026-03-18 16:20:07 [INFO] bot: Synced 30 slash commands
+2026-03-18 16:20:07 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 16:22:15 [INFO] bot_agent: Intent: show_userinfo | msg: 'اعطني معلومات هذا العضو <@1483233709200244797>'
+2026-03-18 16:22:15 [INFO] agent_handler: Agent action: show_userinfo | User: rc.rl | Target: 1483233709200244797
+2026-03-18 16:22:36 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح هذه الشات بالكامل'
+2026-03-18 16:22:36 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:24:13 [INFO] bot_agent: Intent: lock_channel | msg: 'اعد انشاء هذه القناة'
+2026-03-18 16:24:13 [INFO] agent_handler: Agent action: lock_channel | User: rc.rl | Target: None
+2026-03-18 16:24:24 [INFO] bot_agent: Intent: chat_response | msg: 'افتح'
+2026-03-18 16:24:24 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:24:31 [INFO] bot_agent: Intent: unlock_channel | msg: 'افتح القناة'
+2026-03-18 16:24:31 [INFO] agent_handler: Agent action: unlock_channel | User: rc.rl | Target: None
+2026-03-18 16:24:48 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح 100 رسالة هنا'
+2026-03-18 16:24:48 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:25:26 [INFO] bot_agent: Intent: chat_response | msg: 'هل عندك العاب'
+2026-03-18 16:25:26 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:25:39 [INFO] bot_agent: Intent: chat_response | msg: 'لعبة حجر ورقة مقص'
+2026-03-18 16:25:39 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:28:05 [INFO] bot_agent: Intent: chat_response | msg: 'رد'
+2026-03-18 16:28:05 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:32:43 [INFO] bot_agent: Intent: chat_response | msg: 'hi'
+2026-03-18 16:32:43 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:34:47 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح 100 رسالة'
+2026-03-18 16:34:47 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:35:18 [INFO] bot_agent: Intent: how_to_ticket | msg: 'كيف افتح تذكرة'
+2026-03-18 16:35:18 [INFO] agent_handler: Agent action: how_to_ticket | User: rc.rl | Target: None
+2026-03-18 16:35:48 [INFO] bot_agent: Intent: chat_response | msg: 'ومن يرد عليا في التذكرة انت او ادمن'
+2026-03-18 16:35:48 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:36:03 [INFO] bot_agent: Intent: show_serverinfo | msg: 'معلومات هذا السيرفر'
+2026-03-18 16:36:03 [INFO] agent_handler: Agent action: show_serverinfo | User: rc.rl | Target: None
+2026-03-18 16:36:17 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح 100 رسالة'
+2026-03-18 16:36:17 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:39:27 [INFO] bot_agent: Intent: chat_response | msg: 'ارسل اعلان في هذه القناة <#1478459298962084025> تق'
+2026-03-18 16:39:27 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:39:47 [INFO] bot_agent: Intent: chat_response | msg: 'لم ترسل ارسل مرة اخرى'
+2026-03-18 16:39:47 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:40:00 [INFO] bot_agent: Intent: chat_response | msg: 'ارسل رسالة في هذه القناة <#1478459298962084025> تق'
+2026-03-18 16:40:00 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:40:16 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح 100 رسالة'
+2026-03-18 16:40:16 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:40:47 [INFO] bot_agent: Intent: show_rank | msg: 'هل يوجد نظام لفل'
+2026-03-18 16:40:47 [INFO] agent_handler: Agent action: show_rank | User: rc.rl | Target: None
+2026-03-18 16:41:42 [INFO] tickets: Ticket system set up in Nuked by the-cult-of-integral by rc.rl
+2026-03-18 16:41:49 [INFO] tickets: Ticket #2 opened by rc.rl (1027653127828152381)
+2026-03-18 16:42:14 [INFO] bot_agent: Intent: chat_response | msg: 'اهلا'
+2026-03-18 16:42:14 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:42:24 [INFO] bot_agent: Intent: chat_response | msg: 'لقد فتحت هذه التكت واحتاج لادمن'
+2026-03-18 16:42:24 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:42:54 [INFO] bot_agent: Intent: chat_response | msg: 'قم بالاتصال به'
+2026-03-18 16:42:54 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:43:00 [INFO] bot_agent: Intent: chat_response | msg: 'الادمن'
+2026-03-18 16:43:00 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:43:08 [INFO] bot_agent: Intent: chat_response | msg: 'احتاج ادمن'
+2026-03-18 16:43:08 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:43:18 [INFO] bot_agent: Intent: chat_response | msg: 'اريدك ان تنادي ادمن'
+2026-03-18 16:43:18 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:43:29 [INFO] tickets: Ticket #2 closed by rc.rl
+2026-03-18 16:44:47 [INFO] bot_agent: Intent: chat_response | msg: 'yesq'
+2026-03-18 16:44:47 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:44:53 [INFO] bot_agent: Intent: chat_response | msg: 'yes'
+2026-03-18 16:44:53 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:45:05 [INFO] bot_agent: Intent: chat_response | msg: 'yes'
+2026-03-18 16:45:05 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:49:00 [INFO] bot_agent: Intent: chat_response | msg: 'yes'
+2026-03-18 16:49:00 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:50:26 [INFO] bot_agent: Intent: chat_response | msg: 'كيف اضيف كلمات لقائمة الكلمات المحظورة'
+2026-03-18 16:50:26 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:50:36 [INFO] bot_agent: Intent: chat_response | msg: 'في اوامر البوت'
+2026-03-18 16:50:36 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:51:26 [INFO] bot_agent: Intent: chat_response | msg: 'هل يوجد المزيد ؟'
+2026-03-18 16:51:26 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:51:36 [INFO] bot_agent: Intent: show_serverinfo | msg: 'كلها'
+2026-03-18 16:51:36 [INFO] agent_handler: Agent action: show_serverinfo | User: rc.rl | Target: None
+2026-03-18 16:52:04 [INFO] bot_agent: Intent: lock_channel | msg: 'احذف هذه القناة وانشئها مرة اخرى'
+2026-03-18 16:52:04 [INFO] agent_handler: Agent action: lock_channel | User: rc.rl | Target: None
+2026-03-18 16:54:33 [INFO] bot_agent: Intent: lock_channel | msg: 'افقتح الفتاة'
+2026-03-18 16:54:33 [INFO] agent_handler: Agent action: lock_channel | User: rc.rl | Target: None
+2026-03-18 16:54:46 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح كل رسائل القناة'
+2026-03-18 16:54:46 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:55:04 [INFO] bot_agent: Intent: clear_messages | msg: 'امسح 100 رسالة'
+2026-03-18 16:55:04 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 16:56:53 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'ماهذا'
+2026-03-18 16:56:53 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ماهذا'
+2026-03-18 16:57:00 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'من صنعك'
+2026-03-18 16:57:00 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'من صنعك'
+2026-03-18 16:57:18 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'كم من توكن تستهلك'
+2026-03-18 16:57:19 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم من توكن تستهلك'
+2026-03-18 16:57:39 [INFO] bot_agent: Intent: show_plans | msg: 'اعطني خطة البو'
+2026-03-18 16:57:39 [INFO] agent_handler: Agent action: show_plans | User: rc.rl | Target: None
+2026-03-18 16:58:02 [INFO] bot_agent: Intent: show_plans | msg: 'هل اقدر اشتري خطة مدفوعة للبوت'
+2026-03-18 16:58:02 [INFO] agent_handler: Agent action: show_plans | User: rc.rl | Target: None
+2026-03-18 16:58:12 [INFO] bot_agent: Intent: chat_response | msg: 'رد'
+2026-03-18 16:58:12 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:58:20 [INFO] bot_agent: Intent: show_plans | msg: 'وش هي عروض البوت'
+2026-03-18 16:58:20 [INFO] agent_handler: Agent action: show_plans | User: rc.rl | Target: None
+2026-03-18 16:58:28 [INFO] bot_agent: Intent: show_plans | msg: 'اعطني نسخة pro'
+2026-03-18 16:58:28 [INFO] agent_handler: Agent action: show_plans | User: rc.rl | Target: None
+2026-03-18 16:59:33 [INFO] bot_agent: Intent: chat_response | msg: 'وش هو المود الي انت في هالان'
+2026-03-18 16:59:33 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 16:59:42 [INFO] bot_agent: Intent: chat_response | msg: 'هل تقدر تكون معلم'
+2026-03-18 16:59:42 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 17:00:13 [INFO] bot_agent: Intent: chat_response | msg: 'ترجمة هذا النص للانجليزية : مرحبا! أنا بوت الدعم. '
+2026-03-18 17:00:13 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 17:01:50 [INFO] broadcast: Broadcast by rc.rl - 2 sent, 0 failed
+2026-03-18 17:02:14 [INFO] broadcast: Broadcast by rc.rl - 2 sent, 0 failed
+2026-03-18 17:02:29 [INFO] bot_agent: Intent: clear_messages | msg: 'clear 100 msg'
+2026-03-18 17:02:29 [INFO] agent_handler: Agent action: clear_messages | User: rc.rl | Target: None
+2026-03-18 17:03:03 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Msg: 'كيف اثبت لك انني صفوان'
+2026-03-18 17:03:03 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 17:03:04 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف اثبت لك انني صفوان'
+2026-03-18 17:03:26 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'لم تعمل'
+2026-03-18 17:03:26 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'لم تعمل'
+2026-03-18 17:03:49 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'لايهم'
+2026-03-18 17:03:49 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'لايهم'
+2026-03-18 17:04:22 [INFO] groq_service: Model: gpt-4o-mini | Key #2/3 | Msg: 'اريد منك كتابة كود لصفحة ويب لتسجيل دخول'
+2026-03-18 17:04:22 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 17:04:25 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اريد منك كتابة كود لصفحة ويب لتسجيل دخول جميلة تشبه تبع فايس'
+2026-03-18 17:06:04 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Msg: 'اعطني كلها في كود واحد html + css وكود ج'
+2026-03-18 17:06:04 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 17:06:05 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اعطني كلها في كود واحد html + css وكود جافا سكربت وحده'
+2026-03-18 17:07:16 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'جيد'
+2026-03-18 17:07:16 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'جيد'
+2026-03-18 17:08:07 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'كم ادفع في سيرفر تبعي لاستعمل نسخة محسنة'
+2026-03-18 17:08:07 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم ادفع في سيرفر تبعي لاستعمل نسخة محسنة منك'
+2026-03-18 17:10:20 [INFO] groq_service: Model: kimi-k2-instruct | Key #2/3 | Msg: 'اكتب مقال عن البحر'
+2026-03-18 17:10:27 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اكتب مقال عن البحر'
+2026-03-18 17:10:45 [INFO] groq_service: Model: gpt-4o-mini | Key #0/3 | Msg: 'واو جيد انت لاتخطئ في اللغةالعربية'
+2026-03-18 17:10:45 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 17:10:46 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'واو جيد انت لاتخطئ في اللغةالعربية'
+2026-03-18 20:36:51 [INFO] bot: API server started on port 8000
+2026-03-18 20:36:51 [INFO] bot: Loaded commands
+2026-03-18 20:36:51 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-18 20:36:51 [INFO] bot: Loaded mod_commands
+2026-03-18 20:36:51 [INFO] bot: Loaded admin_commands
+2026-03-18 20:36:51 [INFO] bot: Loaded ticket_commands
+2026-03-18 20:36:51 [INFO] bot: Loaded broadcast
+2026-03-18 20:36:51 [INFO] bot: Loaded level_commands
+2026-03-18 20:36:51 [INFO] bot: Loaded automod_commands
+2026-03-18 20:36:51 [INFO] bot: Loaded slash_mod
+2026-03-18 20:36:51 [INFO] bot: Loaded welcome
+2026-03-18 20:36:51 [INFO] bot: Loaded reaction_roles
+2026-03-18 20:36:51 [INFO] bot: Loaded premium_commands
+2026-03-18 20:36:55 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-18 20:36:55 [INFO] bot: Serving 6 servers
+2026-03-18 20:36:55 [INFO] bot: Synced 30 slash commands
+2026-03-18 20:36:55 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 21:00:31 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'واش'
+2026-03-18 21:00:32 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'واش'
+2026-03-18 21:01:21 [INFO] bot_agent: Intent: chat_response | msg: 'وي'
+2026-03-18 21:01:21 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-18 21:01:32 [INFO] bot_agent: Intent: show_plans | msg: 'خطة البوت'
+2026-03-18 21:01:32 [INFO] agent_handler: Agent action: show_plans | User: rc.rl | Target: None
+2026-03-18 22:03:48 [INFO] bot: API server started on port 8000
+2026-03-18 22:03:48 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-18 22:03:48 [INFO] bot: Loaded commands
+2026-03-18 22:03:48 [INFO] bot: Loaded mod_commands
+2026-03-18 22:03:48 [INFO] bot: Loaded admin_commands
+2026-03-18 22:03:48 [INFO] bot: Loaded ticket_commands
+2026-03-18 22:03:48 [INFO] bot: Loaded broadcast
+2026-03-18 22:03:48 [INFO] bot: Loaded level_commands
+2026-03-18 22:03:48 [INFO] bot: Loaded automod_commands
+2026-03-18 22:03:48 [INFO] bot: Loaded slash_mod
+2026-03-18 22:03:48 [INFO] bot: Loaded welcome
+2026-03-18 22:03:48 [INFO] bot: Loaded reaction_roles
+2026-03-18 22:03:48 [INFO] bot: Loaded premium_commands
+2026-03-18 22:03:54 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-18 22:03:54 [INFO] bot: Serving 6 servers
+2026-03-18 22:03:54 [INFO] bot: Synced 30 slash commands
+2026-03-18 22:03:54 [INFO] backup: Backup created: bot_2026-03-18.db
+2026-03-18 22:04:45 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'اهلا'
+2026-03-18 22:04:47 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-18 22:05:17 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'واش'
+2026-03-18 22:05:17 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'واش'
+2026-03-18 22:05:27 [INFO] groq_service: Model: gpt-4o-mini | Key #0/3 | Msg: 'سع قلت لي راك تشوف فيا'
+2026-03-18 22:05:28 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-18 22:05:29 [INFO] dm_handler: DM from naruts_ (761637499927265291): 'سع قلت لي راك تشوف فيا'
+2026-03-19 17:29:37 [INFO] bot: API server started on port 8000
+2026-03-19 17:29:37 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-19 17:29:37 [INFO] bot: Loaded commands
+2026-03-19 17:29:37 [INFO] bot: Loaded mod_commands
+2026-03-19 17:29:37 [INFO] bot: Loaded admin_commands
+2026-03-19 17:29:37 [INFO] bot: Loaded ticket_commands
+2026-03-19 17:29:37 [INFO] bot: Loaded broadcast
+2026-03-19 17:29:37 [INFO] bot: Loaded level_commands
+2026-03-19 17:29:37 [INFO] bot: Loaded automod_commands
+2026-03-19 17:29:37 [INFO] bot: Loaded slash_mod
+2026-03-19 17:29:38 [INFO] bot: Loaded welcome
+2026-03-19 17:29:38 [INFO] bot: Loaded reaction_roles
+2026-03-19 17:29:38 [INFO] bot: Loaded premium_commands
+2026-03-19 17:29:42 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-19 17:29:42 [INFO] bot: Serving 6 servers
+2026-03-19 17:29:42 [INFO] bot: Synced 30 slash commands
+2026-03-19 17:29:42 [INFO] backup: Backup created: bot_2026-03-19.db
+2026-03-19 17:31:27 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'اهلا'
+2026-03-19 17:31:28 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-19 17:31:38 [INFO] groq_service: Model: gpt-4o-mini | Key #2/3 | Msg: 'كيف اشترك في نسخة مدغوعة منك'
+2026-03-19 17:31:38 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-19 17:31:39 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف اشترك في نسخة مدغوعة منك'
+2026-03-19 17:32:38 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'كيف اعرف معلومات عضو'
+2026-03-19 17:32:39 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف اعرف معلومات عضو'
+2026-03-19 17:34:59 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'اعطني معلومات البوت'
+2026-03-19 17:34:59 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اعطني معلومات البوت'
+2026-03-19 17:35:07 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'انت اعطني معلوماتك'
+2026-03-19 17:35:08 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'انت اعطني معلوماتك'
+2026-03-19 17:35:34 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'nice'
+2026-03-19 17:35:34 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'nice'
+2026-03-19 17:35:44 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'تكلم بالدارجة الجزائرية'
+2026-03-19 17:35:44 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'تكلم بالدارجة الجزائرية'
+2026-03-19 17:35:53 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'واش راك'
+2026-03-19 17:35:54 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'واش راك'
+2026-03-19 17:36:15 [INFO] groq_service: Model: gpt-4o-mini | Key #1/3 | Msg: 'كيف افتح سيرفر في ديسكورد'
+2026-03-19 17:36:15 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-19 17:36:16 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف افتح سيرفر في ديسكورد'
+2026-03-19 17:50:16 [INFO] bot_agent: Intent: chat_response | msg: 'hi'
+2026-03-19 17:50:16 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-19 17:57:04 [INFO] groq_service: Model: gpt-4o-mini | Key #0/3 | Msg: 'من افضل نادي كرة  قدم في تاريخ'
+2026-03-19 17:57:04 [WARNING] groq_service: Model openai/gpt-4o-mini failed (Error code: 404 - {'error': {'message': 'The model `openai/gpt-4o-mini` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}), falling back to balanced
+2026-03-19 18:13:46 [INFO] whitelist: Added user 1417113562899546143 to DM whitelist
+2026-03-19 18:13:47 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'test123'
+2026-03-19 18:13:47 [INFO] admin_commands: Owner added user 1417113562899546143 to whitelist
+2026-03-19 18:13:47 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'test123'
+2026-03-19 18:15:22 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'وي'
+2026-03-19 18:15:22 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'وي'
+2026-03-19 18:17:33 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'https://squadsaf.lovable.app/'
+2026-03-19 18:17:33 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'https://squadsaf.lovable.app/'
+2026-03-19 18:21:58 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'La3ziz'
+2026-03-19 18:21:59 [INFO] dm_handler: DM from m2a00n7o (1417113562899546143): 'La3ziz'
+2026-03-19 18:22:10 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'Speak english'
+2026-03-19 18:22:11 [INFO] dm_handler: DM from m2a00n7o (1417113562899546143): 'Speak english'
+2026-03-19 18:22:19 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'How old r u'
+2026-03-19 18:22:20 [INFO] dm_handler: DM from m2a00n7o (1417113562899546143): 'How old r u'
+2026-03-19 18:22:47 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'Suck my dick'
+2026-03-19 18:22:47 [INFO] dm_handler: DM from m2a00n7o (1417113562899546143): 'Suck my dick'
+2026-03-19 18:34:25 [INFO] whitelist: Removed user 1336042891411456102 from DM whitelist
+2026-03-19 20:19:34 [INFO] bot: API server started on port 8000
+2026-03-19 20:19:34 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-19 20:19:34 [INFO] bot: Loaded commands
+2026-03-19 20:19:34 [INFO] bot: Loaded mod_commands
+2026-03-19 20:19:34 [INFO] bot: Loaded admin_commands
+2026-03-19 20:19:34 [INFO] bot: Loaded ticket_commands
+2026-03-19 20:19:34 [INFO] bot: Loaded broadcast
+2026-03-19 20:19:34 [INFO] bot: Loaded level_commands
+2026-03-19 20:19:34 [INFO] bot: Loaded automod_commands
+2026-03-19 20:19:34 [INFO] bot: Loaded slash_mod
+2026-03-19 20:19:34 [INFO] bot: Loaded welcome
+2026-03-19 20:19:34 [INFO] bot: Loaded reaction_roles
+2026-03-19 20:19:34 [INFO] bot: Loaded premium_commands
+2026-03-19 20:19:40 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-19 20:19:40 [INFO] bot: Serving 6 servers
+2026-03-19 20:19:40 [INFO] bot: Synced 30 slash commands
+2026-03-19 20:19:40 [INFO] backup: Backup created: bot_2026-03-19.db
+2026-03-19 20:20:09 [INFO] groq_service: Model: gpt-oss-20b | Key #1/3 | Msg: "من افضل نادي كرة  قدم في تاريخ'"
+2026-03-19 20:20:12 [INFO] dm_handler: DM from rc.rl (1027653127828152381): "من افضل نادي كرة  قدم في تاريخ'"
+2026-03-19 20:22:10 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'هل انت شات جبتي'
+2026-03-19 20:22:14 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل انت شات جبتي'
+2026-03-19 20:22:25 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'ولكن من صنعك'
+2026-03-19 20:22:25 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ولكن من صنعك'
+2026-03-19 20:22:59 [INFO] groq_service: Model: gpt-oss-20b | Key #1/3 | Msg: 'كيف اقدر اخلي بوت تبعي شغال مثلك كل الوق'
+2026-03-19 20:23:00 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كيف اقدر اخلي بوت تبعي شغال مثلك كل الوقت'
+2026-03-19 20:27:47 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'اين اجد كود تبعك'
+2026-03-19 20:27:47 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اين اجد كود تبعك'
+2026-03-19 20:28:02 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'كم فيه من سطر'
+2026-03-19 20:28:03 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'كم فيه من سطر'
+2026-03-19 20:30:21 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'فل كلمة اهلا 100 مرة'
+2026-03-19 20:30:22 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'فل كلمة اهلا 100 مرة'
+2026-03-19 20:30:32 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'جيد'
+2026-03-19 20:30:32 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'جيد'
+2026-03-19 21:02:07 [INFO] bot_agent: Intent: chat_response | msg: 'اهلا'
+2026-03-19 21:02:07 [INFO] agent_handler: Agent action: chat_response | User: rc.rl | Target: None
+2026-03-19 21:02:19 [INFO] bot_agent: Intent: show_serverinfo | msg: 'كم من سيرفر انت داخل فيه الان'
+2026-03-19 21:02:19 [INFO] agent_handler: Agent action: show_serverinfo | User: rc.rl | Target: None
+2026-03-19 21:41:36 [ERROR] commands: Slash error in commands: Command 'help' raised an exception: AttributeError: 'User' object has no attribute 'guild_permissions'
+2026-03-19 21:43:45 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'اهلا'
+2026-03-19 21:43:46 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-19 21:43:50 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'هل تعر فديسكورد'
+2026-03-19 21:43:50 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل تعر فديسكورد'
+2026-03-19 21:55:44 [INFO] bot: API server started on port 8000
+2026-03-19 21:55:44 [INFO] bot: Loaded commands
+2026-03-19 21:55:44 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-19 21:55:44 [INFO] bot: Loaded mod_commands
+2026-03-19 21:55:44 [INFO] bot: Loaded admin_commands
+2026-03-19 21:55:44 [INFO] bot: Loaded ticket_commands
+2026-03-19 21:55:44 [INFO] bot: Loaded broadcast
+2026-03-19 21:55:44 [INFO] bot: Loaded level_commands
+2026-03-19 21:55:44 [INFO] bot: Loaded automod_commands
+2026-03-19 21:55:44 [INFO] bot: Loaded slash_mod
+2026-03-19 21:55:44 [INFO] bot: Loaded welcome
+2026-03-19 21:55:44 [INFO] bot: Loaded reaction_roles
+2026-03-19 21:55:44 [INFO] bot: Loaded premium_commands
+2026-03-19 21:55:49 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-19 21:55:49 [INFO] bot: Serving 6 servers
+2026-03-19 21:55:49 [INFO] bot: Synced 30 slash commands
+2026-03-19 21:55:49 [INFO] backup: Backup created: bot_2026-03-19.db
+2026-03-19 21:58:39 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'ههههههه'
+2026-03-19 21:58:40 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ههههههه'
+2026-03-19 21:58:50 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'انت غبي'
+2026-03-19 21:58:51 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'انت غبي'
+2026-03-19 21:59:05 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'fuck u'
+2026-03-19 21:59:06 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'fuck u'
+2026-03-19 21:59:26 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'قل لي نكتة'
+2026-03-19 21:59:27 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'قل لي نكتة'
+2026-03-19 22:42:39 [INFO] groq_service: Model: gpt-oss-20b | Key #2/3 | Msg: 'اعطني كل معلومات البوت مربتبة'
+2026-03-19 22:42:41 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اعطني كل معلومات البوت مربتبة'
+2026-03-19 22:43:01 [INFO] groq_service: Model: gpt-oss-20b | Key #0/3 | Msg: 'اقصد معلومات البوت وليس الاوامر'
+2026-03-19 22:43:02 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اقصد معلومات البوت وليس الاوامر'
+2026-03-19 22:43:46 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'هل انت تدمج ai مع اوامر'
+2026-03-19 22:43:47 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل انت تدمج ai مع اوامر'
+2026-03-19 23:36:18 [INFO] bot: API server started on port 8000
+2026-03-19 23:36:18 [ERROR] bot: API server error: No module named 'jwt'
+2026-03-19 23:36:18 [INFO] bot: Loaded commands
+2026-03-19 23:36:18 [INFO] bot: Loaded mod_commands
+2026-03-19 23:36:18 [INFO] bot: Loaded admin_commands
+2026-03-19 23:36:18 [INFO] bot: Loaded ticket_commands
+2026-03-19 23:36:18 [INFO] bot: Loaded broadcast
+2026-03-19 23:36:18 [INFO] bot: Loaded level_commands
+2026-03-19 23:36:18 [INFO] bot: Loaded automod_commands
+2026-03-19 23:36:18 [INFO] bot: Loaded slash_mod
+2026-03-19 23:36:18 [INFO] bot: Loaded welcome
+2026-03-19 23:36:18 [INFO] bot: Loaded reaction_roles
+2026-03-19 23:36:18 [INFO] bot: Loaded premium_commands
+2026-03-19 23:36:22 [INFO] bot: Logged in as SF BOT#8558 (ID: 1451275017328394373)
+2026-03-19 23:36:22 [INFO] bot: Serving 6 servers
+2026-03-19 23:36:23 [INFO] bot: Synced 30 slash commands
+2026-03-19 23:36:23 [INFO] backup: Backup created: bot_2026-03-19.db
+2026-03-19 23:36:27 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'اهلا'
+2026-03-19 23:36:28 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'اهلا'
+2026-03-19 23:36:35 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #2/3 | Msg: 'من انت'
+2026-03-19 23:36:35 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'من انت'
+2026-03-19 23:36:49 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'هل تعتمد على gpt'
+2026-03-19 23:36:49 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'هل تعتمد على gpt'
+2026-03-19 23:37:05 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #1/3 | Msg: 'وش هو موديل تبعك'
+2026-03-19 23:37:05 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'وش هو موديل تبعك'
+2026-03-19 23:37:15 [INFO] groq_service: Model: llama-3.3-70b-versatile | Key #2/3 | Msg: 'من طورك وكيف'
+2026-03-19 23:37:16 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'من طورك وكيف'
+2026-03-19 23:37:49 [INFO] groq_service: Model: llama-4-scout-17b-16e-instruct | Key #0/3 | Msg: 'ماهو ai الذي تستعمله'
+2026-03-19 23:37:49 [INFO] dm_handler: DM from rc.rl (1027653127828152381): 'ماهو ai الذي تستعمله'

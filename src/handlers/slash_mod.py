@@ -16,6 +16,22 @@ class SlashModCog(commands.Cog):
         self.bot = bot
 
     # ── /ban ───────────────────────────────────────────────
+    # ── /banner ────────────────────────────────────────────
+    @app_commands.command(name="banner", description="Show a member's banner [Basic+]")
+    @app_commands.describe(member="Member to check")
+    async def banner(self, interaction: discord.Interaction, member: discord.Member = None):
+        from src.services.plan_guard import require_plan
+        if not await require_plan(interaction, "banner"):
+            return
+        member = member or interaction.user
+        user = await self.bot.fetch_user(member.id)
+        if not user.banner:
+            await interaction.response.send_message(f"⚠️ {member.mention} has no banner.", ephemeral=True)
+            return
+        embed = discord.Embed(title=f"{member}'s Banner", color=0x5865F2)
+        embed.set_image(url=user.banner.url)
+        await interaction.response.send_message(embed=embed)
+
     @app_commands.command(name="ban", description="Ban a member from the server")
     @app_commands.describe(member="Member to ban", reason="Reason for ban")
     @app_commands.checks.has_permissions(ban_members=True)
