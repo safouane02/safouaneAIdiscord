@@ -34,6 +34,15 @@ from src.services.log_service import get_log_channel
 
 app = FastAPI(title="SF Bot API", version="1.0.0")
 
+@app.get("/")
+async def health_check():
+    return {
+        "status": "online",
+        "bot_name": "SF BOT",
+        "timestamp": time.time(),
+        "color_theme": "Yellow & Black" # 
+    }
+
 WEBSITE_URL = os.getenv("WEBSITE_URL", "http://localhost:3000")
 API_SECRET = os.getenv("API_SECRET", "changeme")
 JWT_SECRET = os.getenv("JWT_SECRET", "jwt_secret_changeme")
