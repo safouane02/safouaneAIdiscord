@@ -1,153 +1,200 @@
-# SF Discord Bot
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=SF%20Discord%20Bot&fontSize=90" alt="Header Image" />
+  
+  # 🤖 SF Discord Bot
+  
+  **An Advanced, AI-Powered Discord Moderation & Management Assistant**
+  
+  [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
+  [![Discord.py](https://img.shields.io/badge/Discord.py-2.0+-blue.svg?logo=discord&logoColor=white)](https://discordpy.readthedocs.io/)
+  [![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+  [![License](https://img.shields.io/badge/License-MIT-green.svg)](#-license)
+  [![Status](https://img.shields.io/badge/Status-Active-success.svg)]()
+</div>
 
-Production-ready Discord bot focused on moderation, support automation, and AI-powered assistance.  
-Built for communities that need fast tooling, clean workflows, and scalable server operations.
+---
 
-## Why This Project
+## 📖 Table of Contents
+- [About The Project](#-about-the-project)
+- [Key Features](#-key-features)
+- [Tech Stack](#-tech-stack)
+- [Architecture](#-architecture)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Configuration](#-configuration)
+- [Security & Best Practices](#-security--best-practices)
+- [Contributing](#-contributing)
+- [License](#-license)
 
-Managing active Discord communities requires more than basic commands. This bot combines:
+---
 
-- strong moderation controls,
-- ticket-based support operations,
-- leveling and community engagement,
-- optional API/dashboard integration,
-- AI features for faster staff and user interactions.
+## 🌟 About The Project
 
-## Core Features
+**SF Discord Bot** is a production-grade Discord bot designed to automate server moderation, provide AI-powered assistance, and streamline community management. Whether you're running a small community or a massive server, SF Bot provides the necessary tools to keep your server safe, active, and engaging.
 
-- **Moderation Suite**: ban, kick, timeout, warn, softban, lock/unlock, clear, snipe, and more.
-- **Ticket System**: open/close workflows, staff access, and transcript exports.
-- **AI Assistant**: AI responses in DMs and support contexts.
-- **Leveling & Rewards**: XP progression, leaderboard support, and role rewards.
-- **Broadcast Tools**: admin-focused messaging and utility actions.
-- **Premium Controls**: feature gating and usage-aware tiers.
-- **Web/API Layer**: FastAPI endpoints for dashboard and integrations.
+Unlike traditional bots, SF Bot integrates an **Advanced AI Assistant** (powered by Groq) to handle support queries dynamically and includes a built-in **FastAPI backend** to seamlessly connect with external dashboards (like Next.js).
 
-## Tech Stack
+---
 
-- **Language**: Python 3.10+
-- **Discord Framework**: `discord.py`
-- **API Backend**: `fastapi`, `uvicorn`
-- **Database**: `aiosqlite`
-- **AI Integration**: Groq API
+## ✨ Key Features
 
-## Architecture
+🛡️ **Advanced Moderation Suite**
+- Comprehensive commands: Ban, Kick, Timeout, Warn, Mute, Clear, and Softban.
+- Smart Automod capabilities to prevent spam and toxic behavior.
+- Advanced logging for all administrative actions.
+
+🎫 **Automated Ticket System**
+- Allow users to easily open support tickets.
+- Dedicated staff workflows (claim, close).
+- Generate and download HTML transcripts for record-keeping.
+
+🧠 **AI-Powered Assistance**
+- Smart conversational AI built using the Groq API.
+- Multiple unique personalities (Default, Sarcastic, Teacher, Developer, Roast).
+- Natural language query resolution for community members.
+
+📈 **Leveling & Engagement**
+- Dynamic XP and leveling system.
+- Leaderboards to foster community activity.
+- Configurable XP rates and automated role rewards.
+
+👑 **Premium Management & Subscriptions**
+- Built-in tier system to gate exclusive features.
+- Track AI token usage per server to manage API costs.
+
+🌐 **FastAPI Web & Dashboard Integration**
+- Built-in REST API to power Next.js or React dashboards.
+- Secure JWT-based Discord OAuth authentication.
+
+---
+
+## 💻 Tech Stack
+
+| Component | Technology | Description |
+|-----------|------------|-------------|
+| **Core** | `Python 3.10+` | Main programming language |
+| **Discord Library** | `discord.py` | Official Discord API wrapper |
+| **Backend API** | `FastAPI` & `Uvicorn` | High-performance async web framework |
+| **Database** | `aiosqlite` | Asynchronous SQLite for robust local storage |
+| **AI Integration**| `Groq API` | Ultra-fast LLM inference API |
+
+---
+
+## 🏗 Architecture
 
 ```text
-.
-├── bot.py                      # Discord bot entry point
-├── api.py                      # FastAPI backend (optional dashboard/api)
-├── requirements.txt
-├── .env.example
-├── src/
-│   ├── handlers/               # Discord commands/events/cogs
-│   ├── services/               # business logic, db, ai, moderation, tickets
-│   └── config.py               # runtime settings
-├── data/                       # runtime-generated data (git ignored)
-├── logs/                       # runtime logs (git ignored)
-├── discloud.config             # Discloud deployment config
-└── .discloudignore
+📦 sf-discord-bot
+ ┣ 📂 src
+ ┃ ┣ 📂 handlers       # Discord command cogs & event listeners
+ ┃ ┣ 📂 services       # Business logic (DB, AI, Tickets, Premium)
+ ┃ ┗ 📜 config.py      # Core runtime configurations
+ ┣ 📂 data             # Local SQLite databases (Auto-generated)
+ ┣ 📂 logs             # App and error logs (Auto-generated)
+ ┣ 📂 nextjs-integration # Setup guides for web dashboards
+ ┣ 📜 bot.py           # Main Bot entry point
+ ┣ 📜 api.py           # FastAPI server entry point
+ ┣ 📜 requirements.txt # Python dependencies
+ ┗ 📜 .env.example     # Environment variables template
 ```
 
-## Quick Start
+---
 
-### 1) Clone
+## 🚀 Getting Started
 
-```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
-```
+Follow these instructions to set up your own instance of the SF Discord Bot.
 
-### 2) Create a virtual environment
+### Prerequisites
 
-```bash
-python -m venv .venv
-```
+- **Python 3.10 or higher** installed on your machine.
+- A **Discord Bot Token** (Create an application at the [Discord Developer Portal](https://discord.com/developers/applications)).
+- A **Groq API Key** for AI features (Get it from [Groq Console](https://console.groq.com/)).
 
-Windows PowerShell:
+### Installation
 
-```bash
-.venv\Scripts\Activate.ps1
-```
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/safouane02/safouaneAIdiscord.git
+   cd safouaneAIdiscord
+   ```
 
-### 3) Install dependencies
+2. **Create a virtual environment**
+   ```bash
+   # Windows
+   python -m venv .venv
+   .venv\Scripts\activate
 
-```bash
-pip install -r requirements.txt
-```
+   # Linux/macOS
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
 
-### 4) Configure environment
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Create `.env` from template:
+4. **Configure Environment Variables**
+   - Copy the example config file:
+     ```bash
+     cp .env.example .env
+     ```
+   - Open `.env` and fill in your credentials. (See [Configuration](#-configuration))
 
-```bash
-copy .env.example .env
-```
+5. **Run the Bot**
+   ```bash
+   python bot.py
+   ```
+   *The FastAPI server will automatically start on port 8000 if `ENABLE_API=true` in your `.env`.*
 
-Then fill required values.
+---
 
-### 5) Run the bot
+## ⚙️ Configuration
 
-```bash
-python bot.py
-```
+Your `.env` file should contain the following variables:
 
-Optional API service:
+| Variable | Description | Required |
+|----------|-------------|:---:|
+| `DISCORD_TOKEN` | Your Discord Bot Token | ✅ |
+| `OWNER_ID` | Your Discord User ID for administrative overrides | ✅ |
+| `BOT_PREFIX` | Default command prefix (e.g., `!`) | ✅ |
+| `GROQ_API_KEY` | Key for AI features | ✅ |
+| `WHITELIST_PASSWORD` | Password for accessing the bot in DMs | ✅ |
+| `ENABLE_API` | Set to `true` to enable FastAPI | ❌ |
+| `API_PORT` | Port for the FastAPI server (Default: `8000`) | ❌ |
+| `API_SECRET` | Secret for internal API authentication | ❌ |
+| `JWT_SECRET` | Secret for encoding Dashboard JWT tokens | ❌ |
+| `DISCORD_CLIENT_ID`| For Dashboard OAuth integration | ❌ |
+| `DISCORD_CLIENT_SECRET`| For Dashboard OAuth integration | ❌ |
 
-```bash
-uvicorn api:app --host 0.0.0.0 --port 8000
-```
+---
 
-## Environment Variables
+## 🔒 Security & Best Practices
 
-### Required (Bot)
+- **Never share your `.env` file:** It is included in `.gitignore` to prevent accidental uploads.
+- **Bot Intents:** Ensure you have enabled **Message Content Intent**, **Server Members Intent**, and **Presence Intent** in the Discord Developer Portal.
+- **Deployment:** For production, it is highly recommended to use a process manager like `pm2`, `systemd`, or Docker to keep the bot running 24/7.
+- **Permissions:** Only grant the bot the permissions it strictly needs (Admin is recommended only for initial setup or private servers).
 
-- `DISCORD_TOKEN`
-- `GROQ_API_KEY`
-- `OWNER_ID`
-- `WHITELIST_PASSWORD`
+---
 
-### Required (API/Dashboard)
+## 🤝 Contributing
 
-- `API_SECRET`
-- `JWT_SECRET`
-- `DISCORD_CLIENT_ID`
-- `DISCORD_CLIENT_SECRET`
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-## Security Best Practices
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- Never commit `.env`, tokens, or private credentials.
-- Rotate keys immediately if any secret is exposed.
-- Keep `API_SECRET` and `JWT_SECRET` long and random.
-- Do not commit runtime data (`data/`) or logs (`logs/`) to public repos.
-- Use least-privilege bot permissions in Discord servers.
+---
 
-## Deployment
+## 📄 License
 
-- Ready for Discloud with included `discloud.config` and `.discloudignore`.
-- Can be deployed on any Linux/Windows host with Python and environment variables configured.
-- For production, use a process manager (e.g., PM2, systemd, supervisor) and restart policies.
+Distributed under the MIT License. See `LICENSE` for more information.
 
-## Recommended First Commands
-
-- `!help`
-- `!ticketsetup`
-- moderation commands based on your server policy
-
-## Roadmap
-
-- Better observability and metrics
-- Extended dashboard controls
-- More granular permission and role policies
-- Additional language/localization support
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit clear, scoped changes
-4. Open a pull request with testing notes
-
-## License
-
-Add a `LICENSE` file before public distribution (MIT recommended for open-source usage).
+---
+<div align="center">
+  <i>Developed with ❤️ by <a href="https://github.com/safouane02">Safouane Baadoud</a></i>
+</div>
