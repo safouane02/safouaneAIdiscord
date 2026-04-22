@@ -1,10 +1,10 @@
+# safouane02.github
+
 from collections import defaultdict
 from src.config import config as _config, PERSONALITIES
 
-# { user_id: [{"role": ..., "content": ...}] }
 _store: dict[int, list[dict]] = defaultdict(list)
 
-# { user_id: personality_name }
 _personalities: dict[int, str] = {}
 
 

@@ -1,3 +1,5 @@
+# safouane02.github
+
 import time
 import discord
 from discord.ext import commands
@@ -17,9 +19,6 @@ class BotCommands(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ══════════════════════════════════════════════════════
-    # PREFIX COMMANDS (! — Admin only)
-    # ══════════════════════════════════════════════════════
 
     @commands.command()
     async def ping(self, ctx):
@@ -81,9 +80,6 @@ class BotCommands(commands.Cog):
         embed.set_footer(text="github.com/safouane02")
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ══════════════════════════════════════════════════════
-    # SLASH COMMANDS (/ — Everyone)
-    # ══════════════════════════════════════════════════════
 
     @app_commands.command(name="help", description="Show all available commands")
     async def slash_help(self, interaction: discord.Interaction):

@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import asyncio
 import threading
@@ -6,7 +8,6 @@ import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
-# Load environment variables before importing local modules that depend on them
 load_dotenv()
 
 from src.config import config
@@ -53,8 +54,6 @@ bot = create_bot()
 
 @tasks.loop(minutes=5)
 async def connection_watchdog():
-    # If latency goes crazy or bot connection drops silently but doesn't exit,
-    # Render's uvicorn daemon thread will keep the process alive unless we forcefully kill it.
     if bot.is_closed() or bot.latency > 15.0:
         log.critical(f"Zombie connection detected (Latency: {bot.latency})! Exiting process to let Render restart...")
         os._exit(1)
@@ -90,9 +89,6 @@ async def on_ready():
     log.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
     log.info(f"Serving {len(bot.guilds)} servers")
 
-    # ⚠️ IMPORTANT: Removed bot.tree.sync() from on_ready to prevent 429 Rate Limits
-    # on Render since on_ready can fire multiple times if the connection drops.
-    # Use !sync_commands instead to sync manually.
 
     await bot.change_presence(
         activity=discord.Activity(
@@ -160,7 +156,6 @@ async def main():
     await init_premium_table()
     await init_reaction_roles_table()
 
-    # start API server in background thread
     if os.getenv("ENABLE_API", "true").lower() == "true":
         api_thread = threading.Thread(target=start_api, daemon=True)
         api_thread.start()

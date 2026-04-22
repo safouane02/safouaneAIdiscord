@@ -1,12 +1,8 @@
-/**
- * SF Bot API Client — Next.js Integration
- * ضعه في: lib/bot-api.ts
- */
+// safouane02.github
 
 const API_URL = process.env.NEXT_PUBLIC_BOT_API_URL || "http://localhost:8000"
 const API_SECRET = process.env.BOT_API_SECRET || ""
 
-// ── Types ───────────────────────────────────────────────
 
 export interface BotStats {
   guilds: number
@@ -74,7 +70,6 @@ export interface Plan {
   }
 }
 
-// ── Auth ────────────────────────────────────────────────
 
 export async function loginWithDiscord(code: string, redirectUri: string) {
   const res = await fetch(`${API_URL}/auth/discord`, {
@@ -95,7 +90,6 @@ export async function getMe(token: string) {
   return res.json()
 }
 
-// ── Dashboard ───────────────────────────────────────────
 
 export async function getUserGuilds(token: string): Promise<{ guilds: Guild[] }> {
   const res = await fetch(`${API_URL}/dashboard/guilds`, {
@@ -130,7 +124,6 @@ export async function updateGuildSettings(
   return res.json()
 }
 
-// ── Premium ─────────────────────────────────────────────
 
 export async function setGuildPremium(guildId: string, tier: string, days: number) {
   const res = await fetch(`${API_URL}/guild/${guildId}/premium`, {
@@ -145,7 +138,6 @@ export async function setGuildPremium(guildId: string, tier: string, days: numbe
   return res.json()
 }
 
-// ── Public ───────────────────────────────────────────────
 
 export async function getBotStats(): Promise<BotStats> {
   const res = await fetch(`${API_URL}/stats`)
@@ -159,7 +151,6 @@ export async function getPlans(): Promise<Record<string, Plan>> {
   return res.json()
 }
 
-// ── Discord OAuth URL ────────────────────────────────────
 
 export function getDiscordOAuthUrl(redirectUri: string) {
   const params = new URLSearchParams({

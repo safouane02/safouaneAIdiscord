@@ -1,3 +1,5 @@
+# safouane02.github
+
 import discord
 from discord.ext import commands
 from src.services.level_service import (
@@ -15,7 +17,6 @@ class LevelCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── !rank ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def rank(self, ctx, member: discord.Member = None):
@@ -39,7 +40,6 @@ class LevelCog(commands.Cog):
         embed.set_footer(text="github.com/safouane02")
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── !leaderboard ───────────────────────────────────────
     @commands.command(aliases=["lb", "top"])
     async def leaderboard(self, ctx):
         rows = await get_leaderboard(ctx.guild.id, limit=10)
@@ -63,7 +63,6 @@ class LevelCog(commands.Cog):
         embed.set_footer(text="github.com/safouane02")
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── !setlevelrole ──────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_roles=True)
     async def setlevelrole(self, ctx, level: int, role: discord.Role):
@@ -73,14 +72,12 @@ class LevelCog(commands.Cog):
             mention_author=False,
         )
 
-    # ── !removelevelrole ───────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_roles=True)
     async def removelevelrole(self, ctx, level: int):
         await remove_level_role(ctx.guild.id, level)
         await ctx.reply(f"✅ Removed level role for Level {level}.", mention_author=False)
 
-    # ── !levelroles ────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def levelroles(self, ctx):
@@ -105,7 +102,6 @@ class LevelCog(commands.Cog):
         )
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── !levelsettings ─────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def levelsettings(self, ctx):
@@ -124,7 +120,6 @@ class LevelCog(commands.Cog):
         ))
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── !setlevelupchannel ─────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def setlevelupchannel(self, ctx, channel: discord.TextChannel = None):
@@ -135,7 +130,6 @@ class LevelCog(commands.Cog):
         await update_settings(ctx.guild.id, level_channel=channel.id)
         await ctx.reply(f"✅ Level-up announcements will be sent to {channel.mention}", mention_author=False)
 
-    # ── !setlevelupmsg ─────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def setlevelupmsg(self, ctx, *, message: str = None):
@@ -155,7 +149,6 @@ class LevelCog(commands.Cog):
         preview = message.replace("{user}", ctx.author.mention).replace("{level}", "5").replace("{old_level}", "4")
         await ctx.reply(f"✅ Level-up message set!\nPreview: {preview}", mention_author=False)
 
-    # ── !setxpboost ────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def setxpboost(self, ctx, multiplier: float):
@@ -165,7 +158,6 @@ class LevelCog(commands.Cog):
         await update_settings(ctx.guild.id, xp_boost=multiplier)
         await ctx.reply(f"✅ XP boost set to **x{multiplier}** — all members earn {multiplier}x XP now.", mention_author=False)
 
-    # ── !xpsettings ────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def xpsettings(self, ctx, setting: str = None, value: str = None):
@@ -187,7 +179,6 @@ class LevelCog(commands.Cog):
         else:
             await ctx.reply("⚠️ Unknown setting. Use: `xp_per_msg` or `xp_cooldown`", mention_author=False)
 
-    # ── !setxp ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def setxp(self, ctx, member: discord.Member, xp: int):
@@ -197,14 +188,12 @@ class LevelCog(commands.Cog):
         await set_user_xp(ctx.guild.id, member.id, xp)
         await ctx.reply(f"✅ Set **{member.display_name}**'s XP to **{xp:,}**", mention_author=False)
 
-    # ── !resetxp ───────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def resetxp(self, ctx, member: discord.Member):
         await reset_user_xp(ctx.guild.id, member.id)
         await ctx.reply(f"✅ Reset **{member.display_name}**'s XP and level to 0.", mention_author=False)
 
-    # ── XP listener ────────────────────────────────────────
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot or not message.guild:
@@ -229,7 +218,6 @@ class LevelCog(commands.Cog):
         channel_id = settings.get("level_channel")
         channel = message.guild.get_channel(channel_id) if channel_id else message.channel
 
-        # use custom message if set
         custom_msg = settings.get("level_up_msg")
         if custom_msg:
             text = (

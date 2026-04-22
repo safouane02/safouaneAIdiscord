@@ -1,3 +1,5 @@
+# safouane02.github
+
 """
 SF Bot API — للوحة التحكم Next.js
 ─────────────────────────────────
@@ -40,7 +42,7 @@ async def health_check():
         "status": "online",
         "bot_name": "SF BOT",
         "timestamp": time.time(),
-        "color_theme": "Yellow & Black" # 
+        "color_theme": "Yellow & Black"
     }
 
 WEBSITE_URL = os.getenv("WEBSITE_URL", "http://localhost:3000")
@@ -66,7 +68,6 @@ app.add_middleware(
 )
 
 
-# ── Helpers ────────────────────────────────────────────────
 
 def _verify_api_secret(secret: str):
     if API_SECRET == "changeme":
@@ -82,7 +83,7 @@ def _create_jwt(user_id: str, username: str, avatar: str) -> str:
         "user_id": user_id,
         "username": username,
         "avatar": avatar,
-        "exp": int(time.time()) + 86400 * 7,  # 7 days
+        "exp": int(time.time()) + 86400 * 7,
     }
     return jwt.encode(payload, JWT_SECRET, algorithm="HS256")
 
@@ -115,9 +116,6 @@ async def _fetch_discord(endpoint: str, token: str) -> dict:
             return await resp.json()
 
 
-# ══════════════════════════════════════════════════════════
-# AUTH
-# ══════════════════════════════════════════════════════════
 
 class DiscordCodeBody(BaseModel):
     code: str
@@ -175,9 +173,6 @@ async def get_me(authorization: str = Header(None)):
     }
 
 
-# ══════════════════════════════════════════════════════════
-# DASHBOARD
-# ══════════════════════════════════════════════════════════
 
 @app.get("/dashboard/guilds")
 async def get_user_guilds(authorization: str = Header(None)):
@@ -308,9 +303,6 @@ async def update_guild_settings(guild_id: int, request: Request, authorization: 
     return {"success": True, "updated": updated}
 
 
-# ══════════════════════════════════════════════════════════
-# PREMIUM (API Secret protected)
-# ══════════════════════════════════════════════════════════
 
 class SetPremiumBody(BaseModel):
     tier: str
@@ -336,9 +328,6 @@ async def set_guild_premium(guild_id: int, body: SetPremiumBody, x_api_secret: s
     return {"success": True, "guild_id": guild_id, "tier": body.tier, "days": body.days}
 
 
-# ══════════════════════════════════════════════════════════
-# PUBLIC
-# ══════════════════════════════════════════════════════════
 
 @app.get("/stats")
 async def get_bot_stats():

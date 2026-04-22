@@ -1,3 +1,5 @@
+# safouane02.github
+
 import shutil
 import asyncio
 from pathlib import Path
@@ -8,7 +10,7 @@ log = get_logger("backup")
 
 BACKUP_DIR = Path("data/backups")
 BACKUP_DIR.mkdir(parents=True, exist_ok=True)
-MAX_BACKUPS = 7  # keep last 7 days
+MAX_BACKUPS = 7
 
 
 def create_backup() -> Path:
@@ -21,7 +23,6 @@ def create_backup() -> Path:
 
     shutil.copy2(db_path, backup_path)
 
-    # remove old backups beyond MAX_BACKUPS
     backups = sorted(BACKUP_DIR.glob("bot_*.db"))
     while len(backups) > MAX_BACKUPS:
         backups[0].unlink()
@@ -33,5 +34,5 @@ def create_backup() -> Path:
 
 async def backup_loop():
     while True:
-        await asyncio.sleep(86400)  # every 24 hours
+        await asyncio.sleep(86400)
         create_backup()

@@ -1,7 +1,4 @@
-/**
- * Dashboard Page — مثال بسيط
- * ضعه في: app/dashboard/page.tsx
- */
+// safouane02.github
 
 "use client"
 
@@ -40,7 +37,6 @@ export default function Dashboard() {
         <h1 className="text-2xl font-bold">{selected.guild.name}</h1>
         <p className="text-gray-400">{selected.guild.member_count.toLocaleString()} members</p>
 
-        {/* Premium Card */}
         <div className="mt-4 p-4 bg-gray-800 rounded-lg">
           <h2 className="font-semibold">
             {selected.premium.emoji} {selected.premium.plan} Plan
@@ -53,7 +49,6 @@ export default function Dashboard() {
           </p>
         </div>
 
-        {/* Leaderboard */}
         <div className="mt-4 p-4 bg-gray-800 rounded-lg">
           <h2 className="font-semibold mb-3">🏆 Leaderboard</h2>
           {selected.leaderboard.map((entry) => (
@@ -70,7 +65,6 @@ export default function Dashboard() {
           ))}
         </div>
 
-        {/* Tickets */}
         <div className="mt-4 p-4 bg-gray-800 rounded-lg">
           <h2 className="font-semibold">🎫 Tickets</h2>
           <p className="text-sm text-gray-400 mt-1">

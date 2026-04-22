@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import discord
 from discord import app_commands
@@ -19,7 +21,6 @@ class PremiumCog(commands.Cog):
     def _is_owner(self, user_id: int) -> bool:
         return user_id == int(os.getenv("OWNER_ID", "0"))
 
-    # ── /premium ───────────────────────────────────────────
     @app_commands.command(name="premium", description="View your server's plan and token usage")
     async def premium(self, interaction: discord.Interaction):
         info = await get_premium_info(interaction.guild.id)
@@ -33,7 +34,6 @@ class PremiumCog(commands.Cog):
             color=plan["color"],
         )
 
-        # token usage bar
         if limit < 999999:
             progress = min(used / limit, 1.0)
             bar_filled = int(progress * 20)
@@ -71,7 +71,6 @@ class PremiumCog(commands.Cog):
         embed.set_footer(text="github.com/safouane02")
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ── /plans ─────────────────────────────────────────────
     @app_commands.command(name="plans", description="Compare all available plans")
     async def plans(self, interaction: discord.Interaction):
         current_tier = await get_tier(interaction.guild.id)
@@ -101,7 +100,6 @@ class PremiumCog(commands.Cog):
         embed.set_footer(text=f"للشراء: {WEBSITE_URL}")
         await interaction.response.send_message(embed=embed)
 
-    # ── /setpremium (owner only) ───────────────────────────
     @app_commands.command(name="setpremium", description="Set premium tier for a server (owner only)")
     @app_commands.describe(
         guild_id="Server ID",
@@ -136,7 +134,6 @@ class PremiumCog(commands.Cog):
         )
         log.info(f"Premium set: guild {gid} → {tier} by {interaction.user}")
 
-    # ── /premiumlist (owner only) ──────────────────────────
     @app_commands.command(name="premiumlist", description="List all premium servers (owner only)")
     async def premiumlist(self, interaction: discord.Interaction):
         if not self._is_owner(interaction.user.id):

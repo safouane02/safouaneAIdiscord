@@ -1,9 +1,9 @@
+# safouane02.github
+
 from src.config import OWNER_INFO, BOT_COMMANDS_INFO
 
-# Minimal sections per topic — avoids sending all commands every time
 _SECTIONS = {
     "moderation": """
-## Moderation Commands
 - !ban @user [reason]
 - !unban <id> [reason]
 - !kick @user [reason]
@@ -17,7 +17,6 @@ _SECTIONS = {
 - !history @user
 """,
     "management": """
-## Channel & Member Management
 - !clear <amount>
 - !nuke
 - !lock / !unlock
@@ -30,7 +29,6 @@ _SECTIONS = {
 - !snipe / !editsnipe
 """,
     "levels": """
-## Level & XP Commands
 - !rank [@user]
 - !leaderboard
 - !setlevelrole <level> @role
@@ -44,7 +42,6 @@ _SECTIONS = {
 - !resetxp @user
 """,
     "tickets": """
-## Ticket System
 - !ticketsetup — setup the ticket system
 - !ticketpanel — edit panel message
 - !ticketmessage — edit ticket welcome message
@@ -56,7 +53,6 @@ _SECTIONS = {
 - !ticketstats
 """,
     "ai": """
-## AI & Chat
 - !ask <question>
 - !mode <default|sarcastic|teacher|developer>
 - !clear_chat
@@ -64,7 +60,6 @@ _SECTIONS = {
 - @Bot + @user mention → AI moderation
 """,
     "info": """
-## Info Commands
 - !serverinfo, !userinfo [@user], !whois [@user]
 - !avatar [@user], !banner [@user]
 - !servericon, !membercount, !channelinfo
@@ -72,7 +67,6 @@ _SECTIONS = {
 - !ping, !info
 """,
     "broadcast": """
-## Broadcast
 - !dm all <msg>
 - !dm humans <msg>
 - !dm @role <msg>
@@ -110,13 +104,11 @@ def build_prompt(user_message: str, personality_prompt: str = None) -> str:
         if any(k in msg for k in keywords):
             relevant_sections.append(_SECTIONS[topic])
 
-    # always include owner info if asked
     needs_owner = any(k in msg for k in [
         "who made", "who built", "developer", "creator", "من صنع", "من بناك", "صفوان"
     ])
 
     if not relevant_sections:
-        # generic question — send minimal prompt
         prompt = _BASE_PROMPT
         if needs_owner:
             prompt += OWNER_INFO

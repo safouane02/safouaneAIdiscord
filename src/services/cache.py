@@ -1,14 +1,14 @@
+# safouane02.github
+
 import time
 import hashlib
 from collections import OrderedDict
 
-# Simple LRU cache with TTL
-# key: hash(question) → value: (answer, timestamp)
 
 _cache: OrderedDict[str, tuple[str, float]] = OrderedDict()
 
-MAX_SIZE = 500       # max cached answers
-TTL = 60 * 60 * 6   # 6 hours
+MAX_SIZE = 500
+TTL = 60 * 60 * 6
 
 
 def _hash(text: str) -> str:
@@ -28,7 +28,6 @@ def get(question: str) -> str | None:
         _cache.pop(key, None)
         return None
 
-    # move to end (LRU)
     _cache.move_to_end(key)
     return answer
 
@@ -39,7 +38,7 @@ def set(question: str, answer: str):
     if key in _cache:
         _cache.move_to_end(key)
     elif len(_cache) >= MAX_SIZE:
-        _cache.popitem(last=False)  # remove oldest
+        _cache.popitem(last=False)
 
     _cache[key] = (answer, time.time())
 

@@ -1,3 +1,5 @@
+# safouane02.github
+
 import io
 import aiohttp
 import discord
@@ -15,7 +17,6 @@ class WelcomeCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── /setwelcome ────────────────────────────────────────
     @app_commands.command(name="setwelcome", description="Configure the welcome message")
     @app_commands.describe(
         channel="Channel to send welcome messages",
@@ -50,7 +51,6 @@ class WelcomeCog(commands.Cog):
         embed.set_footer(text="Placeholders: {user} {server} {count}")
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ── /testwelcome ───────────────────────────────────────
     @app_commands.command(name="testwelcome", description="Preview the welcome message")
     @app_commands.checks.has_permissions(administrator=True)
     async def testwelcome(self, interaction: discord.Interaction):
@@ -58,7 +58,6 @@ class WelcomeCog(commands.Cog):
         file, embed = await _build_welcome(interaction.user, interaction.guild)
         await interaction.followup.send(embed=embed, file=file if file else discord.utils.MISSING, ephemeral=True)
 
-    # ── member join event ──────────────────────────────────
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
         config = get_config(member.guild.id)
@@ -95,7 +94,6 @@ async def _build_welcome(member: discord.Member, guild: discord.Guild) -> tuple:
     embed.set_thumbnail(url=member.display_avatar.url)
     embed.set_footer(text=f"{guild.name} • {guild.member_count} members")
 
-    # generate welcome card image
     file = None
     try:
         file = await _generate_card(member)
@@ -115,7 +113,6 @@ async def _generate_card(member: discord.Member) -> discord.File:
     img = Image.new("RGB", (width, height), bg_color)
     draw = ImageDraw.Draw(img)
 
-    # background gradient strip
     for x in range(width):
         ratio = x / width
         r = int(43 + (88 - 43) * ratio * 0.3)
@@ -123,7 +120,6 @@ async def _generate_card(member: discord.Member) -> discord.File:
         b = int(49 + (242 - 49) * ratio * 0.3)
         draw.line([(x, 0), (x, height)], fill=(r, g, b))
 
-    # fetch and paste avatar
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(str(member.display_avatar.url)) as resp:
@@ -137,10 +133,8 @@ async def _generate_card(member: discord.Member) -> discord.File:
     except Exception:
         pass
 
-    # accent circle border
     draw.ellipse((60, 60, 190, 190), outline=accent_color, width=4)
 
-    # text
     try:
         font_large = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 28)
         font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)

@@ -1,20 +1,20 @@
+# safouane02.github
+
 import re
 import time
 from collections import defaultdict
 from src.services.database import DB_PATH_STR
 import aiosqlite
 
-# spam tracking: { (guild_id, user_id): [timestamps] }
 _msg_timestamps: dict[tuple, list] = defaultdict(list)
 
-# duplicate message tracking: { (guild_id, user_id): last_message }
 _last_messages: dict[tuple, str] = {}
 
 DEFAULT_BANNED_WORDS: list[str] = []
 
-SPAM_THRESHOLD = 5       # messages
-SPAM_WINDOW = 5          # seconds
-DUPLICATE_THRESHOLD = 3  # same message count
+SPAM_THRESHOLD = 5
+SPAM_WINDOW = 5
+DUPLICATE_THRESHOLD = 3
 
 
 async def get_automod_settings(guild_id: int) -> dict:

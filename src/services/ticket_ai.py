@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 from groq import AsyncGroq
 from src.services.logger import get_logger
@@ -36,7 +38,6 @@ async def handle_ticket_message(conversation: list[dict]) -> tuple[str, bool]:
 
     content = response.choices[0].message.content.strip()
 
-    # check if AI wants to escalate
     if content.startswith("{") and '"escalate": true' in content:
         import json
         try:

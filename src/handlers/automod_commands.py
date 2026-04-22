@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import discord
 from discord.ext import commands
@@ -18,7 +20,6 @@ class AutoModCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── /setlogchannel ─────────────────────────────────────
     @app_commands.command(name="setlogchannel", description="Set the log channel for moderation events")
     @app_commands.describe(channel="The channel to send logs to")
     @app_commands.checks.has_permissions(administrator=True)
@@ -28,7 +29,6 @@ class AutoModCog(commands.Cog):
             f"✅ Log channel set to {channel.mention}", ephemeral=True
         )
 
-    # ── /automod ───────────────────────────────────────────
     @app_commands.command(name="automod", description="Configure AutoMod settings")
     @app_commands.describe(
         enabled="Enable or disable AutoMod",
@@ -71,7 +71,6 @@ class AutoModCog(commands.Cog):
         embed.add_field(name="Log Channel", value=log_ch.mention if log_ch else "Not set", inline=True)
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ── /addword ───────────────────────────────────────────
     @app_commands.command(name="addword", description="Add a word to the banned words list")
     @app_commands.describe(word="The word to ban")
     @app_commands.checks.has_permissions(administrator=True)
@@ -85,7 +84,6 @@ class AutoModCog(commands.Cog):
         await save_automod_settings(interaction.guild.id, banned_words=words)
         await interaction.response.send_message(f"✅ Added `{word}` to banned words.", ephemeral=True)
 
-    # ── /removeword ────────────────────────────────────────
     @app_commands.command(name="removeword", description="Remove a word from the banned words list")
     @app_commands.describe(word="The word to unban")
     @app_commands.checks.has_permissions(administrator=True)
@@ -95,7 +93,6 @@ class AutoModCog(commands.Cog):
         await save_automod_settings(interaction.guild.id, banned_words=words)
         await interaction.response.send_message(f"✅ Removed `{word}` from banned words.", ephemeral=True)
 
-    # ── /bannedwords ───────────────────────────────────────
     @app_commands.command(name="bannedwords", description="List all banned words")
     @app_commands.checks.has_permissions(administrator=True)
     async def bannedwords(self, interaction: discord.Interaction):
@@ -109,7 +106,6 @@ class AutoModCog(commands.Cog):
             ephemeral=True,
         )
 
-    # ── AutoMod message listener ───────────────────────────
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot or not message.guild:
@@ -125,21 +121,17 @@ class AutoModCog(commands.Cog):
         reason = None
         action = "Message deleted"
 
-        # banned words
         if settings["banned_words"]:
             word = check_banned_words(content, settings["banned_words"])
             if word:
                 reason = f"Banned word: `{word}`"
 
-        # invite links
         if not reason and settings["invite_filter"] and check_invite_link(content):
             reason = "Discord invite link"
 
-        # caps lock
         if not reason and settings["caps_filter"] and check_caps(content):
             reason = "Excessive caps lock"
 
-        # spam
         if not reason and settings["spam_enabled"] and check_spam(message.guild.id, message.author.id):
             reason = "Spam detected"
             action = "Message deleted + warned"
@@ -150,7 +142,6 @@ class AutoModCog(commands.Cog):
             except discord.Forbidden:
                 pass
 
-        # duplicate messages
         if not reason and check_duplicate(message.guild.id, message.author.id, content):
             reason = "Duplicate message"
 
@@ -164,7 +155,6 @@ class AutoModCog(commands.Cog):
             await send_log(message.guild, self.bot, embed)
             log.info(f"AutoMod: {reason} | {message.author} in #{message.channel.name}")
 
-    # ── Log events ─────────────────────────────────────────
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
         from src.services.log_service import join_log_embed

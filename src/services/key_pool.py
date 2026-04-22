@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 from itertools import cycle
 
@@ -5,7 +7,6 @@ from itertools import cycle
 def _load_keys() -> list[str]:
     keys = []
 
-    # support GROQ_API_KEY, GROQ_API_KEY_2, GROQ_API_KEY_3 ...
     primary = os.getenv("GROQ_API_KEY")
     if primary:
         keys.append(primary)

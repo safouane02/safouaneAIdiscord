@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import discord
 import traceback
@@ -40,7 +42,6 @@ async def handle_dm(message: discord.Message):
             add_message(user_id, "user", user_input)
             add_message(user_id, "assistant", reply)
 
-            # Avoid logging private DM content to protect user privacy.
             log.info(f"Processed DM from user_id={user_id}")
 
             for chunk in _split(reply):
@@ -55,4 +56,3 @@ async def handle_dm(message: discord.Message):
 
 def _split(text: str, limit: int = 1900) -> list[str]:
     return [text[i: i + limit] for i in range(0, len(text), limit)]
-

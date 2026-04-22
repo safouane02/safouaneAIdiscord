@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import io
 import asyncio
@@ -19,7 +21,6 @@ from src.services.logger import get_logger
 
 log = get_logger("tickets")
 
-# ── _last_bot_msg persistence is now handled via ticket_store.py ──
 
 
 class TicketCog(commands.Cog):
@@ -35,7 +36,6 @@ class TicketCog(commands.Cog):
     def _ticket_category(self, guild: discord.Guild) -> discord.CategoryChannel | None:
         return discord.utils.get(guild.categories, name=os.getenv("TICKET_CATEGORY", "Tickets"))
 
-    # ── !ticketsetup ───────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def ticketsetup(self, ctx):
@@ -101,7 +101,6 @@ class TicketCog(commands.Cog):
 
         await channel.send(embed=embed, view=OpenTicketView())
 
-    # ── !ticketpanel ───────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def ticketpanel(self, ctx, *, args: str = None):
@@ -142,7 +141,6 @@ class TicketCog(commands.Cog):
             embed.add_field(name=k.capitalize(), value=v, inline=False)
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── !ticketmessage ─────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def ticketmessage(self, ctx, *, args: str = None):
@@ -182,7 +180,6 @@ class TicketCog(commands.Cog):
             embed.add_field(name=k.capitalize(), value=v, inline=False)
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── open ticket ────────────────────────────────────────
     async def open_ticket(self, guild: discord.Guild, user: discord.Member) -> discord.TextChannel | None:
         for channel in guild.text_channels:
             t = get_ticket(guild.id, channel.id)
@@ -220,14 +217,12 @@ class TicketCog(commands.Cog):
         )
         embed.set_footer(text="github.com/safouane02")
 
-        # send welcome message and save its ID so the user must reply to it
         bot_msg = await channel.send(embed=embed, view=TicketActionsView())
         update_ticket(guild.id, channel.id, last_bot_msg_id=bot_msg.id)
 
         log.info(f"Ticket #{ticket_id} opened by {user} ({user.id})")
         return channel
 
-    # ── !ticket ────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def ticket(self, ctx):
@@ -241,7 +236,6 @@ class TicketCog(commands.Cog):
         else:
             await ctx.reply(f"✅ Ticket opened: {channel.mention}", mention_author=False)
 
-    # ── !close ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def close(self, ctx):
@@ -296,7 +290,6 @@ class TicketCog(commands.Cog):
 
         log.info(f"Ticket #{ticket['id']} closed by {closer}")
 
-    # ── !transcript ────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def transcript(self, ctx):
@@ -312,7 +305,6 @@ class TicketCog(commands.Cog):
         )
         await ctx.send(f"📄 Transcript for ticket **#{ticket['id']:04d}**:", file=file)
 
-    # ── !claim ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def claim(self, ctx):
@@ -331,7 +323,6 @@ class TicketCog(commands.Cog):
         update_ticket(ctx.guild.id, ctx.channel.id, claimed_by=ctx.author.id)
         await ctx.send(f"✅ Ticket claimed by {ctx.author.mention}")
 
-    # ── !tadd ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def tadd(self, ctx, member: discord.Member):
@@ -342,7 +333,6 @@ class TicketCog(commands.Cog):
         await ctx.channel.set_permissions(member, view_channel=True, send_messages=True)
         await ctx.send(f"✅ Added {member.mention} to the ticket.")
 
-    # ── !ticketstats ───────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_channels=True)
     async def ticketstats(self, ctx):
@@ -357,7 +347,6 @@ class TicketCog(commands.Cog):
         embed.add_field(name="Open Now", value=open_count, inline=True)
         await ctx.send(embed=embed)
 
-    # ── call staff button handler ──────────────────────────
     async def call_staff(self, interaction: discord.Interaction):
         ticket = get_ticket(interaction.guild.id, interaction.channel.id)
         if not ticket:
@@ -378,7 +367,6 @@ class TicketCog(commands.Cog):
         )
         await interaction.response.send_message(embed=embed)
 
-    # ── AI listener — reply-based only ────────────────────
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot or not message.guild:
@@ -394,7 +382,6 @@ class TicketCog(commands.Cog):
         if message.author.id != ticket["user_id"]:
             return
 
-        # only respond when user replies to the bot's last message
         last_bot_id = ticket.get("last_bot_msg_id")
         is_reply_to_bot = (
             message.reference is not None
@@ -406,7 +393,6 @@ class TicketCog(commands.Cog):
 
         async with message.channel.typing():
             try:
-                # build conversation from channel history
                 history = []
                 async for msg in message.channel.history(limit=30, oldest_first=True):
                     if msg.author.id == message.author.id and msg.content and not msg.content.startswith("!"):
@@ -428,7 +414,6 @@ class TicketCog(commands.Cog):
                 else:
                     bot_msg = await message.reply(response, mention_author=False)
 
-                # update last bot message so user can reply to it
                 update_ticket(message.guild.id, message.channel.id, last_bot_msg_id=bot_msg.id)
 
             except Exception as e:
@@ -444,7 +429,6 @@ class TicketCog(commands.Cog):
             log.error(f"Ticket error in {ctx.command}: {error}")
 
 
-# ── Views ──────────────────────────────────────────────────
 
 class OpenTicketView(discord.ui.View):
     def __init__(self):

@@ -1,3 +1,5 @@
+# safouane02.github
+
 import json
 import os
 from groq import AsyncGroq
@@ -9,9 +11,7 @@ _SYSTEM_PROMPT = """You are SF Bot — a smart, witty Discord bot built by Safou
 
 CRITICAL: You MUST respond with ONLY valid JSON. No explanations, no markdown, just JSON.
 
-## Actions you can perform:
 
-### Info (no permissions needed)
 - show_userinfo → when asked about a user's info, profile, or details
 - show_rank → when asked about level, XP, rank, points
 - show_leaderboard → when asked about leaderboard, top members, most active
@@ -21,7 +21,6 @@ CRITICAL: You MUST respond with ONLY valid JSON. No explanations, no markdown, j
 - how_to_ticket → when asked HOW to open a ticket, ticket system info
 - chat_response → for general questions, greetings, or anything else
 
-### Moderation (requires permissions)
 - ban_member → ban/حظر
 - kick_member → kick/طرد
 - timeout_member → timeout/تقييد مؤقت
@@ -29,12 +28,10 @@ CRITICAL: You MUST respond with ONLY valid JSON. No explanations, no markdown, j
 - mute_member → mute/كتم
 - unmute_member → unmute/رفع الكتم
 
-### Management (requires permissions)
 - clear_messages → clear/مسح رسائل
 - lock_channel → lock/قفل القناة
 - unlock_channel → unlock/فتح القناة
 
-## IMPORTANT EXAMPLES:
 "اعطني معلومات هذا العضو @safouane" → show_userinfo with target
 "معلومات @user" → show_userinfo
 "ما مستوى @ahmed" → show_rank with target
@@ -43,7 +40,6 @@ CRITICAL: You MUST respond with ONLY valid JSON. No explanations, no markdown, j
 "اطرد @user" → kick_member
 "احظر @user لأنه يسبام" → ban_member with reason
 
-## JSON Format:
 {"action": "ACTION_NAME", "target_id": "USER_ID_OR_NULL", "reason": "REASON_OR_NULL", "duration": "DURATION_OR_NULL", "amount": NUMBER_OR_NULL, "message": "TEXT_FOR_CHAT_RESPONSE"}
 
 - target_id: extract from mentions list, use the ID string
@@ -82,7 +78,6 @@ async def detect_intent(
 
         raw = response.choices[0].message.content.strip()
 
-        # strip markdown if present
         if "```" in raw:
             parts = raw.split("```")
             raw = parts[1] if len(parts) > 1 else parts[0]

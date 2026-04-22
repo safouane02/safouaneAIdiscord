@@ -1,3 +1,5 @@
+# safouane02.github
+
 import asyncio
 import discord
 from datetime import timedelta
@@ -10,7 +12,6 @@ from src.services.logger import get_logger
 
 log = get_logger("mod_commands")
 
-# { confirm_message_id: pending_action_dict }
 _pending: dict[int, dict] = {}
 
 
@@ -30,7 +31,6 @@ class ModerationCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── AI mod entry point (called from bot.py) ────────────
     async def process_ai_mod(self, message: discord.Message):
         intent = await detect_moderation_intent(message.content)
 
@@ -72,7 +72,6 @@ class ModerationCog(commands.Cog):
             "requester": message.author,
         }
 
-    # ── confirmation listener ──────────────────────────────
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot or not message.guild:
@@ -88,7 +87,7 @@ class ModerationCog(commands.Cog):
         pending = _pending.pop(ref_id)
 
         if message.author != pending["requester"]:
-            _pending[ref_id] = pending  # put it back
+            _pending[ref_id] = pending
             return
 
         if message.content.lower().strip() in ("yes", "y", "نعم", "أيوه"):
@@ -96,7 +95,6 @@ class ModerationCog(commands.Cog):
         else:
             await message.reply("❌ Action cancelled.", mention_author=False)
 
-    # ── !ban ───────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def ban(self, ctx, member: discord.Member, *, reason: str = "No reason provided"):
@@ -104,7 +102,6 @@ class ModerationCog(commands.Cog):
         case_id = add_case(ctx.guild.id, member.id, ctx.author.id, "ban", reason)
         await ctx.send(embed=mod_embed("🔨 Banned", member, reason, 0xED4245, case_id))
 
-    # ── !unban ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def unban(self, ctx, user_id: int, *, reason: str = "No reason provided"):
@@ -116,7 +113,6 @@ class ModerationCog(commands.Cog):
         except discord.NotFound:
             await ctx.send("⚠️ User not found or not banned.")
 
-    # ── !kick ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(kick_members=True)
     async def kick(self, ctx, member: discord.Member, *, reason: str = "No reason provided"):
@@ -124,7 +120,6 @@ class ModerationCog(commands.Cog):
         case_id = add_case(ctx.guild.id, member.id, ctx.author.id, "kick", reason)
         await ctx.send(embed=mod_embed("👢 Kicked", member, reason, 0xFEE75C, case_id))
 
-    # ── !softban ───────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def softban(self, ctx, member: discord.Member, *, reason: str = "No reason provided"):
@@ -133,7 +128,6 @@ class ModerationCog(commands.Cog):
         case_id = add_case(ctx.guild.id, member.id, ctx.author.id, "softban", reason)
         await ctx.send(embed=mod_embed("🧹 Softbanned", member, reason, 0xFF7043, case_id))
 
-    # ── !massban ───────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(ban_members=True)
     async def massban(self, ctx, *members: discord.Member):
@@ -150,7 +144,6 @@ class ModerationCog(commands.Cog):
                 pass
         await ctx.send(f"🔨 Massbanned **{len(banned)}** users: {', '.join(banned)}")
 
-    # ── !timeout ───────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(moderate_members=True)
     async def timeout(self, ctx, member: discord.Member, duration: str = "10m", *, reason: str = "No reason provided"):
@@ -163,7 +156,6 @@ class ModerationCog(commands.Cog):
         case_id = add_case(ctx.guild.id, member.id, ctx.author.id, "timeout", reason)
         await ctx.send(embed=mod_embed(f"⏱️ Timed Out ({duration})", member, reason, 0x5865F2, case_id))
 
-    # ── !untimeout ─────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(moderate_members=True)
     async def untimeout(self, ctx, member: discord.Member):
@@ -171,7 +163,6 @@ class ModerationCog(commands.Cog):
         add_case(ctx.guild.id, member.id, ctx.author.id, "untimeout", "Manual untimeout")
         await ctx.send(f"✅ Removed timeout from {member.mention}")
 
-    # ── !warn ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(kick_members=True)
     async def warn(self, ctx, member: discord.Member, *, reason: str = "No reason provided"):
@@ -183,7 +174,6 @@ class ModerationCog(commands.Cog):
         except discord.Forbidden:
             pass
 
-    # ── !warnings ──────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(kick_members=True)
     async def warnings(self, ctx, member: discord.Member):
@@ -195,7 +185,6 @@ class ModerationCog(commands.Cog):
         embed = discord.Embed(title=f"⚠️ Warnings for {member}", description="\n".join(lines), color=0xFFA500)
         await ctx.send(embed=embed)
 
-    # ── !history ───────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(kick_members=True)
     async def history(self, ctx, member: discord.Member):
@@ -207,7 +196,6 @@ class ModerationCog(commands.Cog):
         embed = discord.Embed(title=f"📋 History for {member}", description="\n".join(lines), color=0x5865F2)
         await ctx.send(embed=embed)
 
-    # ── !clear ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def clear(self, ctx, amount: int = 10):
@@ -217,7 +205,6 @@ class ModerationCog(commands.Cog):
         await asyncio.sleep(3)
         await msg.delete()
 
-    # ── !nuke ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_channels=True)
     async def nuke(self, ctx):
@@ -234,21 +221,18 @@ class ModerationCog(commands.Cog):
             "duration": None,
         }
 
-    # ── !lock ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_channels=True)
     async def lock(self, ctx):
         await ctx.channel.set_permissions(ctx.guild.default_role, send_messages=False)
         await ctx.send("🔒 Channel locked.")
 
-    # ── !unlock ────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_channels=True)
     async def unlock(self, ctx):
         await ctx.channel.set_permissions(ctx.guild.default_role, send_messages=None)
         await ctx.send("🔓 Channel unlocked.")
 
-    # ── !mute ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(moderate_members=True)
     async def mute(self, ctx, member: discord.Member, *, reason: str = "No reason provided"):
@@ -261,7 +245,6 @@ class ModerationCog(commands.Cog):
         case_id = add_case(ctx.guild.id, member.id, ctx.author.id, "mute", reason)
         await ctx.send(embed=mod_embed("🔇 Muted", member, reason, 0x5865F2, case_id))
 
-    # ── !unmute ────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(moderate_members=True)
     async def unmute(self, ctx, member: discord.Member):
@@ -272,42 +255,36 @@ class ModerationCog(commands.Cog):
         else:
             await ctx.send(f"⚠️ {member.mention} is not muted.")
 
-    # ── !nick ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_nicknames=True)
     async def nick(self, ctx, member: discord.Member, *, nickname: str):
         await member.edit(nick=nickname)
         await ctx.send(f"✏️ Changed {member.mention}'s nickname to **{nickname}**")
 
-    # ── !move ──────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(move_members=True)
     async def move(self, ctx, member: discord.Member, channel: discord.VoiceChannel):
         await member.move_to(channel)
         await ctx.send(f"➡️ Moved {member.mention} to **{channel.name}**")
 
-    # ── !disconnect ────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(move_members=True)
     async def disconnect(self, ctx, member: discord.Member):
         await member.move_to(None)
         await ctx.send(f"🔌 Disconnected {member.mention} from voice.")
 
-    # ── !role_add ──────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_roles=True)
     async def role_add(self, ctx, member: discord.Member, role: discord.Role):
         await member.add_roles(role)
         await ctx.send(f"✅ Added **{role.name}** to {member.mention}")
 
-    # ── !role_remove ───────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_roles=True)
     async def role_remove(self, ctx, member: discord.Member, role: discord.Role):
         await member.remove_roles(role)
         await ctx.send(f"✅ Removed **{role.name}** from {member.mention}")
 
-    # ── !announce ──────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_channels=True)
     async def announce(self, ctx, channel: discord.TextChannel, *, message: str):
@@ -316,14 +293,12 @@ class ModerationCog(commands.Cog):
         await channel.send(embed=embed)
         await ctx.message.delete()
 
-    # ── !say ───────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def say(self, ctx, *, message: str):
         await ctx.message.delete()
         await ctx.send(message)
 
-    # ── !snipe ─────────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def snipe(self, ctx):
@@ -336,7 +311,6 @@ class ModerationCog(commands.Cog):
         embed.set_footer(text="Deleted message")
         await ctx.send(embed=embed)
 
-    # ── !editsnipe ─────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def editsnipe(self, ctx):
@@ -350,7 +324,6 @@ class ModerationCog(commands.Cog):
         embed.add_field(name="After", value=data["after"], inline=False)
         await ctx.send(embed=embed)
 
-    # ── !embed_cmd ─────────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_messages=True)
     async def embed_cmd(self, ctx, title: str, color: str = "5865F2", *, description: str):
@@ -362,7 +335,6 @@ class ModerationCog(commands.Cog):
         await ctx.message.delete()
         await ctx.send(embed=embed)
 
-    # ── !steal_emoji ───────────────────────────────────────
     @commands.command()
     @commands.has_permissions(manage_emojis=True)
     async def steal_emoji(self, ctx, emoji: discord.PartialEmoji, name: str = None):
@@ -370,7 +342,6 @@ class ModerationCog(commands.Cog):
         new_emoji = await ctx.guild.create_custom_emoji(name=name or emoji.name, image=emoji_bytes)
         await ctx.send(f"✅ Added emoji {new_emoji} as `:{new_emoji.name}:`")
 
-    # ── Info commands ──────────────────────────────────────
 
     @commands.command()
     @commands.has_permissions(administrator=True)
@@ -462,7 +433,6 @@ class ModerationCog(commands.Cog):
         link = await ctx.channel.create_invite(max_age=3600)
         await ctx.send(f"🔗 Invite link (expires in 1h): {link}")
 
-    # ── snipe event listeners ──────────────────────────────
 
     @commands.Cog.listener()
     async def on_message_delete(self, message: discord.Message):
@@ -474,7 +444,6 @@ class ModerationCog(commands.Cog):
         if not before.author.bot and before.content != after.content:
             store_edited(before.channel.id, before, after)
 
-    # ── error handler ──────────────────────────────────────
 
     async def cog_command_error(self, ctx, error):
         if isinstance(error, commands.MissingPermissions):

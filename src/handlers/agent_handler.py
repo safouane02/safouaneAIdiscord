@@ -1,3 +1,5 @@
+# safouane02.github
+
 """
 Agent Handler — ينفذ الأوامر التي يكتشفها bot_agent.
 يُستدعى من reply_handler عند الرد على رسالة البوت.
@@ -25,14 +27,12 @@ async def handle_agent(message: discord.Message, bot: discord.Client) -> bool:
     guild = message.guild
     author = message.author
 
-    # build mentions list
     mentions = [
         {"id": str(m.id), "name": m.display_name, "mention": m.mention}
         for m in message.mentions
         if not m.bot and m.id != bot.user.id
     ]
 
-    # build permissions dict
     perms = author.guild_permissions if guild else None
     user_permissions = {
         "administrator": bool(perms and perms.administrator),
@@ -43,7 +43,6 @@ async def handle_agent(message: discord.Message, bot: discord.Client) -> bool:
         "moderate_members": bool(perms and perms.moderate_members),
     }
 
-    # server context
     server_ctx = ""
     if guild:
         server_ctx = f"Server: {guild.name} | Members: {guild.member_count}"
@@ -64,14 +63,12 @@ async def handle_agent(message: discord.Message, bot: discord.Client) -> bool:
 
     log.info(f"Agent action: {action} | User: {author} | Target: {target_id}")
 
-    # ── chat response (no action) ──────────────────────────
     if action == "chat_response":
         if response_msg:
             await message.reply(response_msg, mention_author=False)
             return True
         return False
 
-    # ── moderation actions ─────────────────────────────────
     target = guild.get_member(int(target_id)) if target_id and guild else None
 
     if action in ("ban_member", "kick_member", "timeout_member", "warn_member", "mute_member", "unmute_member"):
@@ -153,7 +150,6 @@ async def handle_agent(message: discord.Message, bot: discord.Client) -> bool:
 
         return True
 
-    # ── channel management ─────────────────────────────────
     elif action == "clear_messages":
         if not user_permissions["manage_messages"]:
             await message.reply("⛔ ليس لديك صلاحية حذف الرسائل.", mention_author=False)
@@ -182,7 +178,6 @@ async def handle_agent(message: discord.Message, bot: discord.Client) -> bool:
         await message.reply("🔓 تم فتح القناة.", mention_author=False)
         return True
 
-    # ── information actions ────────────────────────────────
     elif action == "show_rank":
         check_user = target or author
         data = await get_user(guild.id, check_user.id)

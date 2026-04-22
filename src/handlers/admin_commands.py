@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import discord
 from discord.ext import commands
@@ -6,7 +8,6 @@ from src.services.logger import get_logger
 
 log = get_logger("admin_commands")
 
-# pending password verifications: {user_id: target_user_id}
 _pending_add: dict[int, int] = {}
 _pending_remove: dict[int, int] = {}
 
@@ -18,7 +19,6 @@ class AdminCog(commands.Cog):
     def _is_owner(self, user_id: int) -> bool:
         return user_id == int(os.getenv("OWNER_ID", "0"))
 
-    # ── !add @user ─────────────────────────────────────────
     @commands.command(name="add")
     async def add_to_whitelist(self, ctx: commands.Context, member: discord.Member = None):
         if not self._is_owner(ctx.author.id):
@@ -39,7 +39,6 @@ class AdminCog(commands.Cog):
         except discord.Forbidden:
             await ctx.reply("⚠️ I can't DM you. Please enable DMs from server members.", mention_author=False)
 
-    # ── !remove @user ──────────────────────────────────────
     @commands.command(name="remove")
     async def remove_from_whitelist(self, ctx: commands.Context, member: discord.Member = None):
         if not self._is_owner(ctx.author.id):
@@ -55,7 +54,6 @@ class AdminCog(commands.Cog):
         else:
             await ctx.reply(f"⚠️ **{member}** was not in the whitelist.", mention_author=False)
 
-    # ── !whitelist ─────────────────────────────────────────
     @commands.command(name="whitelist")
     async def show_whitelist(self, ctx: commands.Context):
         if not self._is_owner(ctx.author.id):
@@ -80,7 +78,6 @@ class AdminCog(commands.Cog):
         )
         await ctx.reply(embed=embed, mention_author=False)
 
-    # ── DM listener for password confirmation ──────────────
     @commands.Cog.listener()
     async def on_message(self, message: discord.Message):
         if message.author.bot:

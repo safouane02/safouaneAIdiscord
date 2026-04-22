@@ -1,7 +1,4 @@
-/**
- * Discord OAuth Callback Page
- * ضعه في: app/auth/callback/page.tsx  (أو pages/auth/callback.tsx)
- */
+// safouane02.github
 
 "use client"
 

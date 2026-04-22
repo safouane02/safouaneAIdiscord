@@ -1,3 +1,5 @@
+# safouane02.github
+
 import discord
 from src.services.groq_service import ask_groq, TokenLimitError
 from src.services.history import get_history, add_message, get_personality
@@ -22,7 +24,6 @@ async def handle_reply(message: discord.Message):
         return
 
     async with message.channel.typing():
-        # try agent first — handles commands and actions
         from discord.ext.commands import Bot
         bot = message._state._get_client()
 
@@ -30,7 +31,6 @@ async def handle_reply(message: discord.Message):
         if handled:
             return
 
-        # fallback to normal AI conversation
         try:
             history = get_history(user_id)
             system_prompt = get_personality(user_id)

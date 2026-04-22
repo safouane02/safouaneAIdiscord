@@ -1,3 +1,5 @@
+# safouane02.github
+
 import aiosqlite
 from pathlib import Path
 
@@ -45,7 +47,6 @@ async def init_db():
             );
         """)
 
-        # migrate existing DBs
         migrations = [
             "ALTER TABLE guild_settings ADD COLUMN xp_boost REAL DEFAULT 1.0",
             "ALTER TABLE guild_settings ADD COLUMN level_up_msg TEXT DEFAULT NULL",

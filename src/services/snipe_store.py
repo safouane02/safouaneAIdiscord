@@ -1,6 +1,7 @@
+# safouane02.github
+
 from collections import defaultdict
 
-# { channel_id: {content, author_name, author_avatar, timestamp} }
 _deleted: dict[int, dict] = {}
 _edited: dict[int, dict] = defaultdict(dict)
 

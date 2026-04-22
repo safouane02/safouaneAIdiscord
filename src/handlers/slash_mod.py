@@ -1,3 +1,5 @@
+# safouane02.github
+
 import discord
 from datetime import timedelta
 from discord import app_commands
@@ -15,8 +17,6 @@ class SlashModCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── /ban ───────────────────────────────────────────────
-    # ── /banner ────────────────────────────────────────────
     @app_commands.command(name="banner", description="Show a member's banner [Basic+]")
     @app_commands.describe(member="Member to check")
     async def banner(self, interaction: discord.Interaction, member: discord.Member = None):
@@ -43,7 +43,6 @@ class SlashModCog(commands.Cog):
         await send_log(interaction.guild, self.bot, embed)
         log.info(f"/ban {member} by {interaction.user} — {reason}")
 
-    # ── /kick ──────────────────────────────────────────────
     @app_commands.command(name="kick", description="Kick a member from the server")
     @app_commands.describe(member="Member to kick", reason="Reason for kick")
     @app_commands.checks.has_permissions(kick_members=True)
@@ -54,7 +53,6 @@ class SlashModCog(commands.Cog):
         await interaction.response.send_message(embed=embed)
         await send_log(interaction.guild, self.bot, embed)
 
-    # ── /timeout ───────────────────────────────────────────
     @app_commands.command(name="timeout", description="Timeout a member")
     @app_commands.describe(member="Member to timeout", duration="Duration: 10m, 1h, 1d", reason="Reason")
     @app_commands.checks.has_permissions(moderate_members=True)
@@ -71,7 +69,6 @@ class SlashModCog(commands.Cog):
         await interaction.response.send_message(embed=embed)
         await send_log(interaction.guild, self.bot, embed)
 
-    # ── /warn ──────────────────────────────────────────────
     @app_commands.command(name="warn", description="Warn a member")
     @app_commands.describe(member="Member to warn", reason="Reason for warning")
     @app_commands.checks.has_permissions(kick_members=True)
@@ -86,7 +83,6 @@ class SlashModCog(commands.Cog):
         except discord.Forbidden:
             pass
 
-    # ── /mute ──────────────────────────────────────────────
     @app_commands.command(name="mute", description="Mute a member")
     @app_commands.describe(member="Member to mute", reason="Reason")
     @app_commands.checks.has_permissions(moderate_members=True)
@@ -102,7 +98,6 @@ class SlashModCog(commands.Cog):
         await interaction.response.send_message(embed=embed)
         await send_log(interaction.guild, self.bot, embed)
 
-    # ── /unmute ────────────────────────────────────────────
     @app_commands.command(name="unmute", description="Unmute a member")
     @app_commands.describe(member="Member to unmute")
     @app_commands.checks.has_permissions(moderate_members=True)
@@ -114,7 +109,6 @@ class SlashModCog(commands.Cog):
         else:
             await interaction.response.send_message(f"⚠️ {member.mention} is not muted.", ephemeral=True)
 
-    # ── /warnings ──────────────────────────────────────────
     @app_commands.command(name="warnings", description="View a member's warnings")
     @app_commands.describe(member="Member to check")
     @app_commands.checks.has_permissions(kick_members=True)
@@ -127,7 +121,6 @@ class SlashModCog(commands.Cog):
         embed = discord.Embed(title=f"⚠️ Warnings for {member}", description="\n".join(lines), color=0xFFA500)
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ── /history ───────────────────────────────────────────
     @app_commands.command(name="history", description="View a member's moderation history")
     @app_commands.describe(member="Member to check")
     @app_commands.checks.has_permissions(kick_members=True)
@@ -140,7 +133,6 @@ class SlashModCog(commands.Cog):
         embed = discord.Embed(title=f"📋 History for {member}", description="\n".join(lines), color=0x5865F2)
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
-    # ── /rank ──────────────────────────────────────────────
     @app_commands.command(name="rank", description="Check your or someone's rank")
     @app_commands.describe(member="Member to check (optional)")
     async def rank(self, interaction: discord.Interaction, member: discord.Member = None):
@@ -160,7 +152,6 @@ class SlashModCog(commands.Cog):
         embed.add_field(name="Progress", value=f"`{bar}` {int(progress * 100)}%", inline=False)
         await interaction.response.send_message(embed=embed)
 
-    # ── /userinfo ──────────────────────────────────────────
     @app_commands.command(name="userinfo", description="Get info about a member")
     @app_commands.describe(member="Member to check")
     async def userinfo(self, interaction: discord.Interaction, member: discord.Member = None):
@@ -174,7 +165,6 @@ class SlashModCog(commands.Cog):
         embed.add_field(name=f"Roles ({len(roles)})", value=" ".join(roles[:10]) or "None", inline=False)
         await interaction.response.send_message(embed=embed)
 
-    # ── /serverinfo ────────────────────────────────────────
     @app_commands.command(name="serverinfo", description="Get info about the server")
     async def serverinfo(self, interaction: discord.Interaction):
         g = interaction.guild

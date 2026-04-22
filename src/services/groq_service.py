@@ -1,3 +1,5 @@
+# safouane02.github
+
 import os
 import re
 from groq import AsyncGroq
@@ -77,19 +79,16 @@ async def ask_groq(
     use_cache: bool = True,
     guild_id: int = None,
 ) -> str:
-    # check cache for short/simple questions with no history
     if use_cache and not history:
         cached = response_cache.get(user_message)
         if cached:
             log.info(f"Cache hit for: {user_message[:50]!r}")
             return cached
 
-    # build minimal relevant prompt
     smart_prompt = build_prompt(user_message, system_prompt)
     if server_context:
         smart_prompt = f"{smart_prompt}\n\n{server_context}"
 
-    # use premium model if server has premium
     if guild_id:
         try:
             from src.services.premium import get_features
@@ -111,7 +110,6 @@ async def ask_groq(
         {"role": "user", "content": user_message},
     ]
 
-    # check daily token limit
     if guild_id:
         try:
             from src.services.premium import check_token_limit, add_token_usage, get_plan, WEBSITE_URL
@@ -146,7 +144,6 @@ async def ask_groq(
         )
         answer = response.choices[0].message.content
 
-        # track token usage
         if guild_id:
             try:
                 from src.services.premium import add_token_usage
@@ -155,7 +152,6 @@ async def ask_groq(
             except Exception:
                 pass
 
-        # cache only if no history (generic question)
         if use_cache and not history:
             response_cache.set(user_message, answer)
 

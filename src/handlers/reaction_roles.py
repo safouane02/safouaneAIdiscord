@@ -1,3 +1,5 @@
+# safouane02.github
+
 import discord
 from discord import app_commands
 from discord.ext import commands
@@ -15,7 +17,6 @@ class ReactionRolesCog(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    # ── /reactionrole add ──────────────────────────────────
     @app_commands.command(name="reactionrole", description="Add or remove a reaction role")
     @app_commands.describe(
         action="add or remove",
@@ -76,7 +77,6 @@ class ReactionRolesCog(commands.Cog):
                 await interaction.response.send_message("⚠️ Please provide a role.", ephemeral=True)
                 return
 
-            # verify message exists
             msg = None
             for channel in interaction.guild.text_channels:
                 try:
@@ -91,7 +91,6 @@ class ReactionRolesCog(commands.Cog):
 
             await add_reaction_role(guild_id, msg_id, emoji, role.id)
 
-            # add reaction to message
             try:
                 await msg.add_reaction(emoji)
             except Exception:
@@ -110,7 +109,6 @@ class ReactionRolesCog(commands.Cog):
                 ephemeral=True,
             )
 
-    # ── reaction add event ─────────────────────────────────
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload: discord.RawReactionActionEvent):
         if payload.user_id == self.bot.user.id:
@@ -135,7 +133,6 @@ class ReactionRolesCog(commands.Cog):
             except discord.Forbidden:
                 pass
 
-    # ── reaction remove event ──────────────────────────────
     @commands.Cog.listener()
     async def on_raw_reaction_remove(self, payload: discord.RawReactionActionEvent):
         if payload.user_id == self.bot.user.id:
