@@ -1,115 +1,153 @@
 # SF Discord Bot
 
-A feature-rich Discord bot built with Python, focused on moderation, support workflows, and AI-assisted interactions.
+Production-ready Discord bot focused on moderation, support automation, and AI-powered assistance.  
+Built for communities that need fast tooling, clean workflows, and scalable server operations.
 
-## Features
+## Why This Project
 
-- AI chat in DMs and ticket channels
-- Moderation commands (ban, kick, timeout, warn, etc.)
-- Ticket system with staff escalation and transcript export
-- Leveling/XP system with role rewards
-- Broadcast DM tools for server admins
-- Premium-aware feature controls
-- Optional FastAPI dashboard backend
+Managing active Discord communities requires more than basic commands. This bot combines:
+
+- strong moderation controls,
+- ticket-based support operations,
+- leveling and community engagement,
+- optional API/dashboard integration,
+- AI features for faster staff and user interactions.
+
+## Core Features
+
+- **Moderation Suite**: ban, kick, timeout, warn, softban, lock/unlock, clear, snipe, and more.
+- **Ticket System**: open/close workflows, staff access, and transcript exports.
+- **AI Assistant**: AI responses in DMs and support contexts.
+- **Leveling & Rewards**: XP progression, leaderboard support, and role rewards.
+- **Broadcast Tools**: admin-focused messaging and utility actions.
+- **Premium Controls**: feature gating and usage-aware tiers.
+- **Web/API Layer**: FastAPI endpoints for dashboard and integrations.
 
 ## Tech Stack
 
-- Python 3.10+
-- `discord.py`
-- `fastapi` + `uvicorn`
-- `aiosqlite`
-- `groq` API integration
+- **Language**: Python 3.10+
+- **Discord Framework**: `discord.py`
+- **API Backend**: `fastapi`, `uvicorn`
+- **Database**: `aiosqlite`
+- **AI Integration**: Groq API
 
-## Project Structure
+## Architecture
 
 ```text
 .
-├── bot.py
-├── api.py
+├── bot.py                      # Discord bot entry point
+├── api.py                      # FastAPI backend (optional dashboard/api)
 ├── requirements.txt
 ├── .env.example
 ├── src/
-│   ├── handlers/
-│   └── services/
-├── data/              # runtime-generated data (ignored by git)
-└── logs/              # runtime logs (ignored by git)
+│   ├── handlers/               # Discord commands/events/cogs
+│   ├── services/               # business logic, db, ai, moderation, tickets
+│   └── config.py               # runtime settings
+├── data/                       # runtime-generated data (git ignored)
+├── logs/                       # runtime logs (git ignored)
+├── discloud.config             # Discloud deployment config
+└── .discloudignore
 ```
 
 ## Quick Start
 
-1. Clone the repository:
+### 1) Clone
 
 ```bash
 git clone https://github.com/<your-username>/<your-repo>.git
 cd <your-repo>
 ```
 
-2. Create and activate a virtual environment:
+### 2) Create a virtual environment
 
 ```bash
 python -m venv .venv
-# Windows PowerShell
+```
+
+Windows PowerShell:
+
+```bash
 .venv\Scripts\Activate.ps1
 ```
 
-3. Install dependencies:
+### 3) Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Create your environment file:
+### 4) Configure environment
+
+Create `.env` from template:
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
-5. Fill in the required values in `.env`, then run:
+Then fill required values.
+
+### 5) Run the bot
 
 ```bash
 python bot.py
 ```
 
-## Required Environment Variables
+Optional API service:
 
-At minimum, set:
+```bash
+uvicorn api:app --host 0.0.0.0 --port 8000
+```
+
+## Environment Variables
+
+### Required (Bot)
 
 - `DISCORD_TOKEN`
 - `GROQ_API_KEY`
 - `OWNER_ID`
 - `WHITELIST_PASSWORD`
 
-If you use the API/dashboard, also set strong values for:
+### Required (API/Dashboard)
 
 - `API_SECRET`
 - `JWT_SECRET`
 - `DISCORD_CLIENT_ID`
 - `DISCORD_CLIENT_SECRET`
 
-## Security and Privacy Notes
+## Security Best Practices
 
-- Never commit `.env` or secret keys.
-- Keep `API_SECRET` and `JWT_SECRET` random and private.
-- Runtime logs and ticket data are intentionally excluded from git.
-- Review Discord permissions before enabling moderation and broadcast commands.
+- Never commit `.env`, tokens, or private credentials.
+- Rotate keys immediately if any secret is exposed.
+- Keep `API_SECRET` and `JWT_SECRET` long and random.
+- Do not commit runtime data (`data/`) or logs (`logs/`) to public repos.
+- Use least-privilege bot permissions in Discord servers.
 
-## Deployment Notes
+## Deployment
 
-- The repository includes `.discloudignore` and `discloud.config` for Discloud deployment.
-- You can deploy to other hosts as long as environment variables are configured correctly.
+- Ready for Discloud with included `discloud.config` and `.discloudignore`.
+- Can be deployed on any Linux/Windows host with Python and environment variables configured.
+- For production, use a process manager (e.g., PM2, systemd, supervisor) and restart policies.
 
 ## Recommended First Commands
 
-- `!ticketsetup` to initialize ticket channels and roles
-- `!help` to view available commands
+- `!help`
+- `!ticketsetup`
+- moderation commands based on your server policy
+
+## Roadmap
+
+- Better observability and metrics
+- Extended dashboard controls
+- More granular permission and role policies
+- Additional language/localization support
 
 ## Contributing
 
-1. Fork the repo
+1. Fork the repository
 2. Create a feature branch
-3. Make your changes
-4. Open a pull request
+3. Commit clear, scoped changes
+4. Open a pull request with testing notes
 
 ## License
 
-Add a license file (`LICENSE`) before public distribution.
+Add a `LICENSE` file before public distribution (MIT recommended for open-source usage).
