@@ -69,11 +69,15 @@ app.add_middleware(
 # ── Helpers ────────────────────────────────────────────────
 
 def _verify_api_secret(secret: str):
+    if API_SECRET == "changeme":
+        raise HTTPException(status_code=500, detail="API secret is not configured securely")
     if secret != API_SECRET:
         raise HTTPException(status_code=401, detail="Invalid API secret")
 
 
 def _create_jwt(user_id: str, username: str, avatar: str) -> str:
+    if JWT_SECRET == "jwt_secret_changeme":
+        raise HTTPException(status_code=500, detail="JWT secret is not configured securely")
     payload = {
         "user_id": user_id,
         "username": username,
@@ -84,6 +88,8 @@ def _create_jwt(user_id: str, username: str, avatar: str) -> str:
 
 
 def _verify_jwt(token: str) -> dict:
+    if JWT_SECRET == "jwt_secret_changeme":
+        raise HTTPException(status_code=500, detail="JWT secret is not configured securely")
     try:
         return jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
     except jwt.ExpiredSignatureError:

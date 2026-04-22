@@ -1,6 +1,7 @@
 import os
 import discord
-from src.services.groq_service import ask_groq
+import traceback
+from src.services.groq_service import ask_groq, TokenLimitError
 from src.services.history import get_history, add_message, get_personality
 from src.services.rate_limiter import is_rate_limited, remaining_cooldown
 from src.services.whitelist import is_allowed
@@ -14,7 +15,7 @@ async def handle_dm(message: discord.Message):
     owner_id = int(os.getenv("OWNER_ID", "0"))
 
     if not is_allowed(user_id, owner_id):
-        await message.reply(
+        await message.channel.send(
             "⛔ Sorry, I only respond to whitelisted users in DMs.\n"
             "Ask the bot owner to add you using `!add`."
         )
@@ -23,7 +24,7 @@ async def handle_dm(message: discord.Message):
 
     if is_rate_limited(user_id):
         wait = remaining_cooldown(user_id)
-        await message.reply(f"⏳ Slow down! Try again in **{wait}s**.")
+        await message.channel.send(f"⏳ Slow down! Try again in **{wait}s**.")
         return
 
     user_input = message.content.strip()
@@ -39,15 +40,19 @@ async def handle_dm(message: discord.Message):
             add_message(user_id, "user", user_input)
             add_message(user_id, "assistant", reply)
 
-            log.info(f"DM from {message.author} ({user_id}): {user_input[:60]!r}")
+            # Avoid logging private DM content to protect user privacy.
+            log.info(f"Processed DM from user_id={user_id}")
 
             for chunk in _split(reply):
-                await message.reply(chunk)
+                await message.channel.send(chunk)
 
+        except TokenLimitError as e:
+            await message.channel.send(str(e))
         except Exception as e:
-            log.error(f"DM handler error for {user_id}: {e}")
-            await message.reply("⚠️ Something went wrong, please try again.")
+            log.error(f"DM handler error for {user_id}: {e}\n{traceback.format_exc()}")
+            await message.channel.send("⚠️ Something went wrong, please try again.")
 
 
 def _split(text: str, limit: int = 1900) -> list[str]:
     return [text[i: i + limit] for i in range(0, len(text), limit)]
+

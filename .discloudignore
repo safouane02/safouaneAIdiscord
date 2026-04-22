@@ -1,0 +1,9 @@
+.venv/
+
+.git/
+__pycache__/
+logs/
+data/
+nextjs-integration/
+*.sqlite
+*.db

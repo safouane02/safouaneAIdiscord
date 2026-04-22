@@ -29,6 +29,7 @@ def create_ticket(guild_id: int, ticket_id: int, user_id: int, channel_id: int) 
         "id": ticket_id,
         "user_id": user_id,
         "channel_id": channel_id,
+        "last_bot_msg_id": None,
         "claimed_by": None,
         "status": "open",
         "opened_at": datetime.utcnow().isoformat(),

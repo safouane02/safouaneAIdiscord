@@ -19,9 +19,7 @@ from src.services.logger import get_logger
 
 log = get_logger("tickets")
 
-# { channel_id: last_bot_message_id }
-# البوت يرد فقط عندما يرد المستخدم على رسالته
-_last_bot_msg: dict[int, int] = {}
+# ── _last_bot_msg persistence is now handled via ticket_store.py ──
 
 
 class TicketCog(commands.Cog):
@@ -224,7 +222,7 @@ class TicketCog(commands.Cog):
 
         # send welcome message and save its ID so the user must reply to it
         bot_msg = await channel.send(embed=embed, view=TicketActionsView())
-        _last_bot_msg[channel.id] = bot_msg.id
+        update_ticket(guild.id, channel.id, last_bot_msg_id=bot_msg.id)
 
         log.info(f"Ticket #{ticket_id} opened by {user} ({user.id})")
         return channel
@@ -264,7 +262,6 @@ class TicketCog(commands.Cog):
 
         transcript_text = await _build_transcript(channel)
         close_ticket(guild.id, channel.id, transcript_text)
-        _last_bot_msg.pop(channel.id, None)
 
         user = guild.get_member(ticket["user_id"])
         if user:
@@ -398,7 +395,7 @@ class TicketCog(commands.Cog):
             return
 
         # only respond when user replies to the bot's last message
-        last_bot_id = _last_bot_msg.get(message.channel.id)
+        last_bot_id = ticket.get("last_bot_msg_id")
         is_reply_to_bot = (
             message.reference is not None
             and message.reference.message_id == last_bot_id
@@ -432,7 +429,7 @@ class TicketCog(commands.Cog):
                     bot_msg = await message.reply(response, mention_author=False)
 
                 # update last bot message so user can reply to it
-                _last_bot_msg[message.channel.id] = bot_msg.id
+                update_ticket(message.guild.id, message.channel.id, last_bot_msg_id=bot_msg.id)
 
             except Exception as e:
                 log.error(f"Ticket AI error: {e}")
@@ -488,7 +485,7 @@ class TicketActionsView(discord.ui.View):
 
 class RatingView(discord.ui.View):
     def __init__(self, guild_id: int, channel_id: int):
-        super().__init__(timeout=120)
+        super().__init__(timeout=None)
         self.guild_id = guild_id
         self.channel_id = channel_id
 

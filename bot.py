@@ -3,8 +3,11 @@ import asyncio
 import threading
 import uvicorn
 import discord
-from discord.ext import commands
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
+
+# Load environment variables before importing local modules that depend on them
+load_dotenv()
 
 from src.config import config
 from src.handlers.reply_handler import handle_reply
@@ -15,8 +18,8 @@ from src.services.reaction_roles import init_reaction_roles_table
 from src.services.backup import create_backup, backup_loop
 from src.services.logger import get_logger
 
-load_dotenv()
 log = get_logger("bot")
+
 
 EXTENSIONS = [
     "src.handlers.commands",
@@ -48,6 +51,28 @@ def create_bot() -> commands.Bot:
 
 bot = create_bot()
 
+@tasks.loop(minutes=5)
+async def connection_watchdog():
+    # If latency goes crazy or bot connection drops silently but doesn't exit,
+    # Render's uvicorn daemon thread will keep the process alive unless we forcefully kill it.
+    if bot.is_closed() or bot.latency > 15.0:
+        log.critical(f"Zombie connection detected (Latency: {bot.latency})! Exiting process to let Render restart...")
+        os._exit(1)
+
+@connection_watchdog.before_loop
+async def before_watchdog():
+    await bot.wait_until_ready()
+
+@bot.command(name="sync_commands", aliases=["sync"])
+@commands.is_owner()
+async def sync_commands(ctx):
+    """Sync slash commands manually. Usage: !sync_commands"""
+    msg = await ctx.send("Syncing...")
+    try:
+        synced = await bot.tree.sync()
+        await msg.edit(content=f"✅ Synced {len(synced)} slash commands!")
+    except Exception as e:
+        await msg.edit(content=f"❌ Failed to sync: {e}")
 
 def start_api():
     """Run FastAPI in a background thread."""
@@ -65,11 +90,9 @@ async def on_ready():
     log.info(f"Logged in as {bot.user} (ID: {bot.user.id})")
     log.info(f"Serving {len(bot.guilds)} servers")
 
-    try:
-        synced = await bot.tree.sync()
-        log.info(f"Synced {len(synced)} slash commands")
-    except Exception as e:
-        log.error(f"Failed to sync slash commands: {e}")
+    # ⚠️ IMPORTANT: Removed bot.tree.sync() from on_ready to prevent 429 Rate Limits
+    # on Render since on_ready can fire multiple times if the connection drops.
+    # Use !sync_commands instead to sync manually.
 
     await bot.change_presence(
         activity=discord.Activity(
@@ -80,6 +103,9 @@ async def on_ready():
 
     create_backup()
     bot.loop.create_task(backup_loop())
+    
+    if not connection_watchdog.is_running():
+        connection_watchdog.start()
 
 
 @bot.event
@@ -111,6 +137,7 @@ async def on_message(message: discord.Message):
             ref = await message.channel.fetch_message(message.reference.message_id)
             if ref.author.id == bot.user.id:
                 await handle_reply(message)
+                return
         except discord.NotFound:
             pass
 
@@ -149,7 +176,7 @@ async def main():
 
         token = os.getenv("DISCORD_TOKEN")
         if not token:
-            raise RuntimeError("DISCORD_TOKEN is not set in .env")
+            raise RuntimeError("DISCORD_TOKEN is not set. Please add it to your .env file or Discloud Dashboard Secrets.")
 
         await bot.start(token)
 

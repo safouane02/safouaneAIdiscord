@@ -23,11 +23,18 @@ def _load_keys() -> list[str]:
 
 class KeyPool:
     def __init__(self):
-        self._keys = _load_keys()
-        self._cycle = cycle(self._keys) if self._keys else None
+        self._keys = None
+        self._cycle = None
         self._current_index = 0
 
+    def _ensure_keys(self):
+        if self._keys is None:
+            self._keys = _load_keys()
+            if self._keys:
+                self._cycle = cycle(self._keys)
+
     def next_key(self) -> str:
+        self._ensure_keys()
         if not self._keys:
             raise RuntimeError("No GROQ_API_KEY found in .env")
         key = next(self._cycle)
@@ -36,7 +43,8 @@ class KeyPool:
 
     @property
     def count(self) -> int:
-        return len(self._keys)
+        self._ensure_keys()
+        return len(self._keys) if self._keys else 0
 
 
 pool = KeyPool()

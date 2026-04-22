@@ -70,7 +70,7 @@ class BroadcastCog(commands.Cog):
         )
         embed.set_footer(text="This cannot be undone")
 
-        view = ConfirmView()
+        view = ConfirmView(ctx.author.id)
         confirm_msg = await ctx.reply(embed=embed, view=view, mention_author=False)
         await view.wait()
 
@@ -120,9 +120,19 @@ class BroadcastCog(commands.Cog):
 
 
 class ConfirmView(discord.ui.View):
-    def __init__(self):
-        super().__init__(timeout=30)
+    def __init__(self, owner_id: int):
+        super().__init__(timeout=60)
+        self.owner_id = owner_id
         self.confirmed = False
+
+    async def interaction_check(self, interaction: discord.Interaction) -> bool:
+        if interaction.user.id != self.owner_id:
+            await interaction.response.send_message(
+                "Only the command author can confirm/cancel this broadcast.",
+                ephemeral=True,
+            )
+            return False
+        return True
 
     @discord.ui.button(label="Confirm", style=discord.ButtonStyle.success, emoji="✅")
     async def confirm(self, interaction: discord.Interaction, button: discord.ui.Button):
