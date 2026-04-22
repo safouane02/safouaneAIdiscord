@@ -1,4 +1,3 @@
-# أضف هذا في ملف .env.local في مشروع Next.js تبعك
 
 NEXT_PUBLIC_BOT_API_URL=http://localhost:8000
 NEXT_PUBLIC_DISCORD_CLIENT_ID=your_discord_client_id
