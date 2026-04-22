@@ -1,5 +1,6 @@
 # Python
 __pycache__/
+**/__pycache__/
 *.py[cod]
 *$py.class
 *.pyd
@@ -9,6 +10,7 @@ build/
 dist/
 *.egg-info/
 .eggs/
+.ipynb_checkpoints/
 
 # Virtual environments
 .venv/
@@ -20,6 +22,10 @@ ENV/
 .env
 .env.*
 !.env.example
+*.env
+*.pem
+*.key
+*.crt
 
 # Local databases and generated data
 *.db
@@ -27,6 +33,12 @@ ENV/
 *.sqlite3
 data/
 logs/
+*.log
+*.log.*
+*.tmp
+*.temp
+*.bak
+*.pid
 
 # Tooling and caches
 .pytest_cache/
@@ -34,7 +46,10 @@ logs/
 .ruff_cache/
 .cache/
 .coverage
+.coverage.*
 htmlcov/
+.tox/
+.nox/
 
 # IDE / OS files
 .vscode/
